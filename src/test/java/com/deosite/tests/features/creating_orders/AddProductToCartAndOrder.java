@@ -48,7 +48,6 @@ public class AddProductToCartAndOrder {
         theActorInTheSpotlight().attemptsTo(
                 Open.miniCart(),
                 Open.checkoutPage(),
-                WaitUntil.the(EMAIL_INPUT, isPresent()).forNoMoreThan(50).seconds(),
                 FillInBillingData.type(userType)
         );
     }
