@@ -43,7 +43,10 @@ public class DeleteFromCart {
                 Open.productPageByPosition(0),
                 AddProduct.toCart(),
                 WaitUntil.the(ALERT_BOX, isNotVisible()),
-                Open.miniCart());
+                MoveMouseDown.move(),
+                Scroll.to(MiniCart.MINICART_BUTTON),
+                Open.miniCart()
+        );
     }
 
     @When("she deletes it")

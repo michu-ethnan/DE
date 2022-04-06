@@ -24,8 +24,7 @@ import static com.deosite.tests.pages.MiniCart.CLOSE_CART_BUTTON;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
-import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isNotPresent;
-import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isPresent;
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.*;
 import static org.hamcrest.Matchers.equalTo;
 
 public class CloseCart {
@@ -41,6 +40,8 @@ public class CloseCart {
                 Open.productPageByPosition(7),
                 //WaitUntil.the(CategoryPage.CATEGORY_HEADER, isNotPresent()),
                 AddProduct.toCart(),
+                MoveMouseDown.move(),
+                Scroll.to(MiniCart.MINICART_BUTTON),
                 Open.miniCart()
         );
     }

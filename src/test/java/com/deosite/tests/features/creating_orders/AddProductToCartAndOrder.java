@@ -20,10 +20,12 @@ import net.serenitybdd.screenplay.waits.WaitUntil;
 import net.thucydides.core.annotations.Steps;
 
 import static com.deosite.tests.abilities.Load.as;
+import static com.deosite.tests.pages.Alert.ALERT_BOX;
 import static com.deosite.tests.pages.CheckoutPage.EMAIL_INPUT;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isNotVisible;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isPresent;
 import static org.hamcrest.CoreMatchers.equalTo;
 
@@ -46,6 +48,8 @@ public class AddProductToCartAndOrder {
     @When("he attempts to order it as {word} using courier delivery")
     public void actor_attempts_to_order_it_as_selected_user_type_using_selected_delivery_type(String userType) {
         theActorInTheSpotlight().attemptsTo(
+                MoveMouseDown.move(),
+                Scroll.to(MiniCart.MINICART_BUTTON),
                 Open.miniCart(),
                 Open.checkoutPage(),
                 FillInBillingData.type(userType)
