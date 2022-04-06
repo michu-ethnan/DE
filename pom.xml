@@ -189,7 +189,7 @@
                     <includes>
                         <include>com/deosite/tests/CucumberTestSuite.java</include>
                     </includes>
-                    <reuseForks>true</reuseForks>
+                    <reuseForks>false</reuseForks>
                     <argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>
                 </configuration>
                 <executions>
@@ -218,6 +218,7 @@
                         <phase>post-integration-test</phase>
                         <goals>
                             <goal>aggregate</goal>
+
                         </goals>
                     </execution>
                 </executions>
@@ -260,22 +261,22 @@
                         <version>${maven.failsafe-plugin.version}</version>
                         <configuration>
                             <includes>
-                                <include>**/CheckoutSuite*.java</include>
+                             <!-- <include>**/CheckoutSuite*.java</include>
                                  <include>**/OrderingTestSuite_1*.java</include>
                                 <include>**/OrderingTestSuite_2.java</include>
                                  <include>**/OrderingTestSuite_3.java</include>
-                                 <include>**/OrderingLoggedInSuite_2.java</include>
-                                <include>**/OrderingLoggedInSuite_2.java</include>>
+                                 <include>**/OrderingLoggedInSuite_1.java</include>
+                                <include>**/OrderingLoggedInSuite_2.java</include>
                                  <include>**/OrderingLoggedInSuite_3.java</include>
                                <innclude>**/FilteringTestSuite*.java</innclude>
                              <include>**/LoggingInSuite*.java</include>
                               <include>**/NavigatingWebsiteSuite_1*.java</include>
                              <include>**/NavigatingWebsiteSuite_2*.java</include>
                              <include>**/SortingSuite*.java</include>
-                                <include>**/UsingMinicartSuite_1*.java</include>
-                                <include>**/UsingMinicartSuite_1*.java</include>
+                                <include>**/UsingMinicartSuite_1*.java</include>-->
+                               <!-- <include>**/UsingMinicartSuite_1*.java</include>-->
                               <include>**/UsingMyAccountSuite*.java</include>
-                            <include>**/ProductPageSuite*.java</include>
+                            <!--<include>**/ProductPageSuite*.java</include>-->
 
                             </includes>
                             <parallel>suites</parallel>

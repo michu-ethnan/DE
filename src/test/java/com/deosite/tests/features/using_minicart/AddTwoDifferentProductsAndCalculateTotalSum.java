@@ -37,9 +37,8 @@ public class AddTwoDifferentProductsAndCalculateTotalSum {
         theActorCalled(actor).wasAbleTo(
                 Setup.site(),
                 ClickCategory.byCategoryNumber(5),
-                Open.productPageByPosition(7),
+                Open.productPageByPosition(6),
                 AddProduct.toCart(),
-                WaitUntil.the(ALERT_BOX, isNotVisible()),
                 ReturnToPreviousPage.goToPreviousPage(),
                 Open.productPageByPosition(8),
                 AddProduct.toCart(),

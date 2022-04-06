@@ -11,10 +11,12 @@ import com.deosite.tests.tasks.product.AddProduct;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import net.serenitybdd.screenplay.ensure.Ensure;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 import net.thucydides.core.annotations.Steps;
 
 import static com.deosite.tests.abilities.Load.as;
+import static com.deosite.tests.pages.Alert.ALERT_BOX;
 import static com.deosite.tests.pages.CategoryPage.CATEGORY_HEADER;
 import static com.deosite.tests.pages.MainMenu.SEARCH_BAR;
 import static com.deosite.tests.pages.SearchPage.PRODUCTS_TITLE;
@@ -63,5 +65,8 @@ public class AddItemsToCart {
         theActorInTheSpotlight().should(seeThat(Alert.value(), equalTo(
                 as(theActorInTheSpotlight()).translate(message)
         )));
+        theActorInTheSpotlight().attemptsTo(
+                Ensure.that(ALERT_BOX).isDisplayed()
+        );
     }
 }

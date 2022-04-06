@@ -24,7 +24,7 @@ Feature: Order products logged in-2
 
   Scenario: Login and Order with courier delivery and paypal payment (changes shipping address)
 
-    Given that Oscar is logged in 1
+    Given that Oscar is logged in 2
     When he orders "mug" using courier delivery
     And he changes shipping address
     And he selects paypal payment
@@ -32,7 +32,7 @@ Feature: Order products logged in-2
 
   Scenario: Login and Order with courier delivery and transfer payment (changes shipping address, changes billing address)
 
-    Given that Oscar is logged in 3
+    Given that Oscar is logged in 2
     When he orders "mug" using courier delivery
     And he changes billing address
     And he changes shipping address
