@@ -1,5 +1,0 @@
-"Story","Title","Result","Date","Stability","Duration (s)"
-"Order products logged in-2","Login and Order with courier delivery and transfer payment (changes shipping address)","SUCCESS","2022-04-01T14:40:48.086863+02:00[Europe/Warsaw]","0.0","36.69"
-"Order products logged in-2","Login and Order with courier delivery and pickup payment (changes billing address, click same shipping address checkbox)","SUCCESS","2022-04-01T14:41:24.969908+02:00[Europe/Warsaw]","0.0","36.87"
-"Order products logged in-2","Login and Order with courier delivery and paypal payment (changes shipping address)","SUCCESS","2022-04-01T14:42:01.917671+02:00[Europe/Warsaw]","0.0","34.74"
-"Order products logged in-2","Login and Order with courier delivery and transfer payment (changes shipping address, changes billing address)","SUCCESS","2022-04-01T14:42:36.736854+02:00[Europe/Warsaw]","0.0","35.27"

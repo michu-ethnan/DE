@@ -1,7 +1,7 @@
 com/deosite/tests/features/creating_orders/OrderProductsLoggedIn.class
 com/deosite/tests/features/using_minicart/AddTwoDifferentProductsAndCalculateTotalSum.class
-com/deosite/tests/features/using_my_account/DeleteAddress.class
 com/deosite/tests/OrderingTestSuite_2.class
+com/deosite/tests/features/using_my_account/DeleteAddress.class
 com/deosite/tests/features/checkout/RefreshPaymentPage.class
 com/deosite/tests/features/filtering/ApplyRangeFilter.class
 com/deosite/tests/features/using_minicart/CloseCart.class
@@ -21,8 +21,8 @@ com/deosite/tests/features/using_minicart/ChangeNumberOfProductsInMinicart.class
 com/deosite/tests/SortingSuite.class
 com/deosite/tests/LoggingInSuite.class
 com/deosite/tests/OrderingLoggedInSuite_2.class
-com/deosite/tests/OrderingTestSuite_3.class
 com/deosite/tests/features/sorting/SortingByPriceHighestFirst.class
+com/deosite/tests/OrderingTestSuite_3.class
 com/deosite/tests/features/navigating_website/BrowseCategories.class
 com/deosite/tests/features/login/LogIn.class
 com/deosite/tests/UsingMinicartSuite_2.class
@@ -36,8 +36,8 @@ com/deosite/tests/features/using_minicart/DeleteFromCartAndCheckTotalSum.class
 com/deosite/tests/CucumberTestSuite.class
 com/deosite/tests/OrderingTestSuite_1.class
 com/deosite/tests/features/using_my_account/EditAddress.class
-com/deosite/tests/features/using_my_account/SeeOrder.class
 com/deosite/tests/UsingMinicartSuite_1.class
+com/deosite/tests/features/using_my_account/SeeOrder.class
 com/deosite/tests/features/navigating_website/SelectPage.class
 com/deosite/tests/features/filtering/ApplyRangeFilterRefreshAndGoToNextPage.class
 com/deosite/tests/features/login/LogInWithProductsInCart.class
