@@ -16,13 +16,11 @@ import net.thucydides.core.annotations.Steps;
 
 import static com.deosite.tests.pages.AccountPage.LOGOUT_BUTTON;
 import static com.deosite.tests.pages.AccountPage.MY_ACCOUNT_HEADER;
-import static com.deosite.tests.pages.LoginPage.LOGIN_BUTTON;
-import static com.deosite.tests.pages.LoginPage.MY_ACCOUNT_BUTTON;
+import static com.deosite.tests.pages.LoginPage.*;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
-import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isPresent;
-import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isClickable;
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.*;
 
 public class LogOut {
 
@@ -37,6 +35,7 @@ public class LogOut {
                 Open.loginPage(),
                 FillInLoginForm.type("login"),
                 SubmitLoginForm.submitLoginForm(),
+                WaitUntil.the(SUBMIT_BUTTON, isNotPresent()),
                 MoveMouseToTop.move(),
                 WaitUntil.the(MY_ACCOUNT_BUTTON, isPresent()),
                 Open.accountPage(),

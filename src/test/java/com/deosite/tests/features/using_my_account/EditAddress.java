@@ -24,9 +24,11 @@ import static com.deosite.tests.pages.AccountPage.ADDRESS_BOOK_BUTTON;
 import static com.deosite.tests.pages.AccountPage.SUBMIT_NEW_ADDRESS_BUTTON;
 import static com.deosite.tests.pages.Alert.ALERT_BOX;
 import static com.deosite.tests.pages.LoginPage.LOGIN_BUTTON;
+import static com.deosite.tests.pages.LoginPage.SUBMIT_BUTTON;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isNotPresent;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isPresent;
 import static org.hamcrest.Matchers.equalTo;
 
@@ -43,6 +45,7 @@ public class EditAddress {
                 Open.loginPage(),
                 FillInLoginForm.type("login"),
                 SubmitLoginForm.submitLoginForm(),
+                WaitUntil.the(SUBMIT_BUTTON, isNotPresent()),
                 MoveMouseToTop.move(),
                 Open.accountPage(),
                 WaitUntil.the(MY_ACCOUNT_HEADER, isPresent()).forNoMoreThan(100).seconds(),
