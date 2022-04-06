@@ -36,11 +36,11 @@ public class AddTwoDifferentProductsAndCalculateTotalSum {
     public void that_actor_has_two_products_in_cart(String actor) {
         theActorCalled(actor).wasAbleTo(
                 Setup.site(),
-                ClickCategory.byCategoryNumber(5),
-                Open.productPageByPosition(6),
+                ClickCategory.byCategoryNumber(0),
+                Open.productPageByPosition(0),
                 AddProduct.toCart(),
                 ReturnToPreviousPage.goToPreviousPage(),
-                Open.productPageByPosition(8),
+                Open.productPageByPosition(5),
                 AddProduct.toCart(),
                 MoveMouseDown.move(),
                 Scroll.to(MiniCart.MINICART_BUTTON),

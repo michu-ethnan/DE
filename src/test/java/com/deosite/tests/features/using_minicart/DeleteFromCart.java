@@ -12,6 +12,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
 import net.serenitybdd.screenplay.actions.*;
+import net.serenitybdd.screenplay.ensure.Ensure;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 import net.thucydides.core.annotations.Steps;
 
@@ -24,8 +25,7 @@ import static com.deosite.tests.pages.SearchPage.PRODUCTS_TITLE;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
-import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isPresent;
-import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isNotVisible;
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.*;
 import static org.hamcrest.Matchers.equalTo;
 
 public class DeleteFromCart {
@@ -42,13 +42,14 @@ public class DeleteFromCart {
                 WaitUntil.the(PRODUCTS_TITLE, isPresent()).forNoMoreThan(50).seconds(),
                 Open.productPageByPosition(0),
                 AddProduct.toCart(),
+                WaitUntil.the(ALERT_BOX, isNotVisible()),
                 Open.miniCart());
     }
 
     @When("she deletes it")
     public void actor_deletes_it() {
         theActorInTheSpotlight().attemptsTo(
-
+                WaitUntil.the(DELETE_PRODUCT_BUTTON, isClickable()).forNoMoreThan(50).seconds(),
                 Click.on(DELETE_PRODUCT_BUTTON),
                 WaitUntil.the(EMPTY_CART_MESSAGE, isPresent())
         );
@@ -59,5 +60,8 @@ public class DeleteFromCart {
         theActorInTheSpotlight().should(seeThat(EmptyCartMessage.value(), equalTo(
                 as(theActorInTheSpotlight()).translate(message)
         )));
+        theActorInTheSpotlight().attemptsTo(
+                Ensure.that(EMPTY_CART_MESSAGE).isDisplayed()
+        );
     }
 }
