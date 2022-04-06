@@ -41,8 +41,6 @@ public class CloseCart {
                 Open.productPageByPosition(7),
                 //WaitUntil.the(CategoryPage.CATEGORY_HEADER, isNotPresent()),
                 AddProduct.toCart(),
-                MoveMouseDown.move(),
-                Scroll.to(MiniCart.MINICART_BUTTON),
                 Open.miniCart()
         );
     }
