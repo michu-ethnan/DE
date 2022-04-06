@@ -73,8 +73,6 @@ public class DeleteAddress {
     public void actor_should_see_a_popup_with_address_deleted_inscription(String message) {
         theActorInTheSpotlight().should(seeThat(com.deosite.tests.questions.alert.Alert.value(), equalTo(
                 as(theActorInTheSpotlight()).translate(message))));
-        theActorInTheSpotlight().attemptsTo(
-                Ensure.that(ALERT_BOX).isDisplayed()
-        );
+
     }
 }

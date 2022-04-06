@@ -1,4 +1,4 @@
-Feature: Add items to cart
+Feature: Adding Products to cart
 
   Customer should be able to add items to cart, by using
   add to card button on product page or by increasing

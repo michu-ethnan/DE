@@ -69,8 +69,6 @@ public class AddAddress {
     public void actor_should_find_this_address_in_the_address_book(String message) {
         theActorInTheSpotlight().should(seeThat(com.deosite.tests.questions.alert.Alert.value(), equalTo(
                 as(theActorInTheSpotlight()).translate(message))));
-        theActorInTheSpotlight().attemptsTo(
-                Ensure.that(ALERT_BOX).isDisplayed()
-        );
+
     }
 }

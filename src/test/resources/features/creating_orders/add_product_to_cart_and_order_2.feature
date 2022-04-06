@@ -1,4 +1,4 @@
-Feature: Add product to cart and order-3
+Feature: Add product to cart and order-2
 
   A customer should be able to add a product to cart and order it.
 

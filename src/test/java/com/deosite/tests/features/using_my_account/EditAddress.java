@@ -85,8 +85,6 @@ public class EditAddress {
     public void actor_should_see_that_it_was_saved(String message) {
         theActorInTheSpotlight().should(seeThat(com.deosite.tests.questions.alert.Alert.value(), equalTo(
                 as(theActorInTheSpotlight()).translate(message))));
-        theActorInTheSpotlight().attemptsTo(
-                Ensure.that(ALERT_BOX).isDisplayed()
-        );
+
     }
 }

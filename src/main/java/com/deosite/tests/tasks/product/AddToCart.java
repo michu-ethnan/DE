@@ -21,8 +21,7 @@ public class AddToCart implements Task {
                 WaitUntil.the(ADD_TO_CART_BUTTON, isPresent()).forNoMoreThan(100).seconds(),
                 WaitUntil.the(ADD_TO_CART_BUTTON, isClickable()).forNoMoreThan(100).seconds(),
                 Click.on(ADD_TO_CART_BUTTON),
-                WaitUntil.the(ALERT_BOX, isPresent()).forNoMoreThan(100).seconds(),
-                Ensure.that(ALERT_BOX).isDisplayed()
+                WaitUntil.the(ALERT_BOX, isPresent()).forNoMoreThan(100).seconds()
         );
     }
 }
