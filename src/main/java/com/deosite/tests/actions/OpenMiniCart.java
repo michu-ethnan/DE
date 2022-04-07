@@ -8,6 +8,7 @@ import net.serenitybdd.screenplay.waits.WaitUntil;
 import net.thucydides.core.annotations.Step;
 
 import static com.deosite.tests.pages.MainMenu.MINI_CART_BUTTON;
+import static com.deosite.tests.pages.MiniCart.GO_TO_CHECKOUT_BUTTON;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.*;
 
 public class OpenMiniCart implements Interaction {
@@ -17,7 +18,8 @@ public class OpenMiniCart implements Interaction {
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
                 WaitUntil.the(MINI_CART_BUTTON, isClickable()).forNoMoreThan(100).seconds(),
-                Click.on(MINI_CART_BUTTON)
+                Click.on(MINI_CART_BUTTON),
+                WaitUntil.the(GO_TO_CHECKOUT_BUTTON, isClickable()).forNoMoreThan(100).seconds()
         );
     }
 }
