@@ -75,17 +75,19 @@ public class EditAddress {
     }
 
     @And("she saves it")
-    public void actor_saves_it() throws InterruptedException {
+    public void actor_saves_it(){
         theActorInTheSpotlight().attemptsTo(
                 Click.on(SUBMIT_NEW_ADDRESS_BUTTON)
         );
-        Thread.sleep(2000);
     }
 
     @Then("she should see that it was saved with popup saying {string}")
     public void actor_should_see_that_it_was_saved(String message) {
         theActorInTheSpotlight().should(seeThat(com.deosite.tests.questions.alert.Alert.value(), equalTo(
                 as(theActorInTheSpotlight()).translate(message))));
+        theActorInTheSpotlight().attemptsTo(
+                WaitUntil.the(ALERT_BOX, isNotPresent())
+        );
 
     }
 }

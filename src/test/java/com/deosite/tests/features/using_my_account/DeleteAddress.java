@@ -61,19 +61,21 @@ public class DeleteAddress {
     }
 
     @And("he confirms that he wants to remove the address")
-    public void actor_confirms_that_he_wants_to_remove_the_address() throws InterruptedException {
+    public void actor_confirms_that_he_wants_to_remove_the_address(){
         theActorInTheSpotlight().attemptsTo(
                 WaitUntil.the(DIALOG_BOX_YES_BUTTON, isClickable()),
                 Click.on(DIALOG_BOX_YES_BUTTON),
                 WaitUntil.the(Alert.ALERT_BOX, isPresent())
         );
-        Thread.sleep(2000);
     }
 
     @Then("he should see a popup with {string} inscription")
     public void actor_should_see_a_popup_with_address_deleted_inscription(String message) {
         theActorInTheSpotlight().should(seeThat(com.deosite.tests.questions.alert.Alert.value(), equalTo(
                 as(theActorInTheSpotlight()).translate(message))));
+        theActorInTheSpotlight().attemptsTo(
+                WaitUntil.the(ALERT_BOX, isNotPresent())
+        );
 
     }
 }

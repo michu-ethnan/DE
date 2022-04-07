@@ -52,7 +52,7 @@ public class AddAddress {
     }
 
     @When("she adds {word} to the address book")
-    public void actor_adds_a_new_address_to_the_address_book(String userType) throws InterruptedException {
+    public void actor_adds_a_new_address_to_the_address_book(String userType) {
         theActorInTheSpotlight().attemptsTo(
                 Click.on(ADDRESS_BOOK_BUTTON),
                 WaitUntil.the(ADD_NEW_ADDRESS_BUTTON, isPresent()),
@@ -63,13 +63,15 @@ public class AddAddress {
                 Click.on(SUBMIT_NEW_ADDRESS_BUTTON),
                 WaitUntil.the(ALERT_BOX, isPresent()).forNoMoreThan(100).seconds()
         );
-        Thread.sleep(2000);
     }
 
     @Then("she should see a popup saying {string}")
     public void actor_should_find_this_address_in_the_address_book(String message) {
         theActorInTheSpotlight().should(seeThat(com.deosite.tests.questions.alert.Alert.value(), equalTo(
                 as(theActorInTheSpotlight()).translate(message))));
+        theActorInTheSpotlight().attemptsTo(
+                WaitUntil.the(ALERT_BOX, isNotPresent())
+        );
 
     }
 }

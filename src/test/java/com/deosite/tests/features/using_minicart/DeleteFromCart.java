@@ -60,6 +60,9 @@ public class DeleteFromCart {
         theActorInTheSpotlight().should(seeThat(EmptyCartMessage.value(), equalTo(
                 as(theActorInTheSpotlight()).translate(message)
         )));
+        theActorInTheSpotlight().attemptsTo(
+                WaitUntil.the(ALERT_BOX, isNotPresent())
+        );
 
     }
 }

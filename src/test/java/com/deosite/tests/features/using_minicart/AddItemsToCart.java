@@ -56,11 +56,10 @@ public class AddItemsToCart {
     }
 
     @When("(s)he tries to add it to cart")
-    public void actor_tries_to_add_product_to_cart() throws InterruptedException {
+    public void actor_tries_to_add_product_to_cart() {
         theActorInTheSpotlight().attemptsTo(
                 AddProduct.toCart()
         );
-        Thread.sleep(2000);
     }
 
     @Then("(s)he should see popup with {string} message")
@@ -68,6 +67,9 @@ public class AddItemsToCart {
         theActorInTheSpotlight().should(seeThat(Alert.value(), equalTo(
                 as(theActorInTheSpotlight()).translate(message)
         )));
+        theActorInTheSpotlight().attemptsTo(
+                WaitUntil.the(ALERT_BOX, isNotPresent())
+        );
 
     }
 }
