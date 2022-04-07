@@ -56,10 +56,11 @@ public class AddItemsToCart {
     }
 
     @When("(s)he tries to add it to cart")
-    public void actor_tries_to_add_product_to_cart() {
+    public void actor_tries_to_add_product_to_cart() throws InterruptedException {
         theActorInTheSpotlight().attemptsTo(
                 AddProduct.toCart()
         );
+        Thread.sleep(2000);
     }
 
     @Then("(s)he should see popup with {string} message")

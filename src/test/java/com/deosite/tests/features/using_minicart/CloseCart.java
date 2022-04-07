@@ -36,12 +36,11 @@ public class CloseCart {
     public void that_actor_opens_minicart_with_a_product(String actor, String product) {
         theActorCalled(actor).wasAbleTo(
                 Setup.site(),
-                ClickCategory.byCategoryNumber(5),
-                Open.productPageByPosition(7),
+                ClickCategory.byCategoryNumber(4),
+                Open.productPageByPosition(0),
                 //WaitUntil.the(CategoryPage.CATEGORY_HEADER, isNotPresent()),
                 AddProduct.toCart(),
-                MoveMouseDown.move(),
-                Scroll.to(MiniCart.MINICART_BUTTON),
+                WaitUntil.the(ALERT_BOX, isNotPresent()),
                 Open.miniCart()
         );
     }

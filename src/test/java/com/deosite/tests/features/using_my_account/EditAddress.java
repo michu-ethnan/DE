@@ -75,10 +75,11 @@ public class EditAddress {
     }
 
     @And("she saves it")
-    public void actor_saves_it() {
+    public void actor_saves_it() throws InterruptedException {
         theActorInTheSpotlight().attemptsTo(
                 Click.on(SUBMIT_NEW_ADDRESS_BUTTON)
         );
+        Thread.sleep(2000);
     }
 
     @Then("she should see that it was saved with popup saying {string}")

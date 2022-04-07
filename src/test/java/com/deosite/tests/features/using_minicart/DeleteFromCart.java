@@ -42,9 +42,6 @@ public class DeleteFromCart {
                 WaitUntil.the(PRODUCTS_TITLE, isPresent()).forNoMoreThan(50).seconds(),
                 Open.productPageByPosition(0),
                 AddProduct.toCart(),
-                WaitUntil.the(ALERT_BOX, isNotVisible()),
-                MoveMouseDown.move(),
-                Scroll.to(MiniCart.MINICART_BUTTON),
                 Open.miniCart()
         );
     }
@@ -63,8 +60,6 @@ public class DeleteFromCart {
         theActorInTheSpotlight().should(seeThat(EmptyCartMessage.value(), equalTo(
                 as(theActorInTheSpotlight()).translate(message)
         )));
-        theActorInTheSpotlight().attemptsTo(
-                Ensure.that(EMPTY_CART_MESSAGE).isDisplayed()
-        );
+
     }
 }

@@ -36,8 +36,8 @@ public class CalculateTotalSumInMinicart {
     public void actor_is_in_minicart(String actor) {
         theActorCalled(actor).wasAbleTo(
                 Setup.site(),
-                ClickCategory.byCategoryNumber(5),
-                Open.productPageByPosition(6)
+                ClickCategory.byCategoryNumber(1),
+                Open.productPageByPosition(0)
                 );
     }
 
@@ -51,8 +51,6 @@ public class CalculateTotalSumInMinicart {
         theActorInTheSpotlight().attemptsTo(
                 AddProduct.toCart(),
                 WaitUntil.the(ALERT_BOX, isNotVisible()).forNoMoreThan(100).seconds(),
-                MoveMouseDown.move(),
-                Scroll.to(MiniCart.MINICART_BUTTON),
                 Open.miniCart(),
                 Click.on(QUANTITY_PICKER),
                 IncreaseNumberOfProducts.byAmountNumber(1),

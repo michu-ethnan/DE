@@ -44,8 +44,6 @@ public class ChangeNumberOfProductsInMinicart {
                 Open.productPageByPosition(0),
                 AddProduct.toCart(),
                 WaitUntil.the(ALERT_BOX, isNotVisible()).forNoMoreThan(100).seconds(),
-                MoveMouseDown.move(),
-                Scroll.to(MiniCart.MINICART_BUTTON),
                 Open.miniCart()
         );
     }
