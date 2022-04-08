@@ -84,13 +84,13 @@ public class EditAddress {
     }
 
     @Then("she should see that it was saved with popup saying {string}")
-    public void actor_should_see_that_it_was_saved(String message) {
+    public void actor_should_see_that_it_was_saved(String message) throws InterruptedException {
         theActorInTheSpotlight().should(seeThat(com.deosite.tests.questions.alert.Alert.value(), equalTo(
                 as(theActorInTheSpotlight()).translate(message))));
         theActorInTheSpotlight().attemptsTo(
-                WaitUntil.the(ALERT_BOX, isNotPresent()),
+
                 Ensure.that(ADD_TO_CART_BUTTON).isNotDisplayed()
         );
-
+Thread.sleep(3000);
     }
 }

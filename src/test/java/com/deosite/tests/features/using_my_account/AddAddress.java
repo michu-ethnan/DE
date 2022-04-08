@@ -71,7 +71,7 @@ public class AddAddress {
         theActorInTheSpotlight().should(seeThat(com.deosite.tests.questions.alert.Alert.value(), equalTo(
                 as(theActorInTheSpotlight()).translate(message))));
         theActorInTheSpotlight().attemptsTo(
-                WaitUntil.the(ALERT_BOX, isNotPresent()).forNoMoreThan(100).seconds(),
+
                 Ensure.that(ADD_TO_CART_BUTTON).isNotDisplayed()
         );
         Thread.sleep(3000);
