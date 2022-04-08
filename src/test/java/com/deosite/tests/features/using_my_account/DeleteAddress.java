@@ -24,6 +24,7 @@ import static com.deosite.tests.pages.AccountPage.DIALOG_BOX_YES_BUTTON;
 import static com.deosite.tests.pages.Alert.ALERT_BOX;
 import static com.deosite.tests.pages.LoginPage.LOGIN_BUTTON;
 import static com.deosite.tests.pages.LoginPage.SUBMIT_BUTTON;
+import static com.deosite.tests.pages.ProductPage.ADD_TO_CART_BUTTON;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
@@ -70,12 +71,13 @@ public class DeleteAddress {
     }
 
     @Then("he should see a popup with {string} inscription")
-    public void actor_should_see_a_popup_with_address_deleted_inscription(String message) {
+    public void actor_should_see_a_popup_with_address_deleted_inscription(String message) throws InterruptedException {
         theActorInTheSpotlight().should(seeThat(com.deosite.tests.questions.alert.Alert.value(), equalTo(
                 as(theActorInTheSpotlight()).translate(message))));
         theActorInTheSpotlight().attemptsTo(
-                WaitUntil.the(ALERT_BOX, isNotPresent())
+                WaitUntil.the(ALERT_BOX, isNotPresent()),
+                Ensure.that(ADD_TO_CART_BUTTON).isNotDisplayed()
         );
-
+        Thread.sleep(3000);
     }
 }

@@ -63,13 +63,15 @@ public class AddItemsToCart {
     }
 
     @Then("(s)he should see popup with {string} message")
-    public void actor_should_see_popup_with_message(String message) {
+    public void actor_should_see_popup_with_message(String message) throws InterruptedException {
         theActorInTheSpotlight().should(seeThat(Alert.value(), equalTo(
                 as(theActorInTheSpotlight()).translate(message)
         )));
         theActorInTheSpotlight().attemptsTo(
-                WaitUntil.the(ALERT_BOX, isNotPresent())
+                WaitUntil.the(ALERT_BOX, isNotPresent()),
+                Ensure.that(SUBMIT_BUTTON).isNotDisplayed()
         );
+        Thread.sleep(3000);
 
     }
 }
