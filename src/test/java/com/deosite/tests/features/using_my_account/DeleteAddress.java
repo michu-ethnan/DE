@@ -29,6 +29,7 @@ import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.*;
+import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.equalTo;
 
 public class DeleteAddress {
@@ -69,15 +70,8 @@ public class DeleteAddress {
                 WaitUntil.the(Alert.ALERT_BOX, isPresent())
         );
     }
-
-    @Then("he should see a popup with {string} inscription")
-    public void actor_should_see_a_popup_with_address_deleted_inscription(String message) throws InterruptedException {
-        theActorInTheSpotlight().should(seeThat(com.deosite.tests.questions.alert.Alert.value(), equalTo(
-                as(theActorInTheSpotlight()).translate(message))));
-        theActorInTheSpotlight().attemptsTo(
-                WaitUntil.the(ALERT_BOX, isNotPresent()),
-                Ensure.that(ADD_TO_CART_BUTTON).isNotDisplayed()
-        );
-        Thread.sleep(3000);
+    @Then("he should see a popup with address deleted inscription")
+    public void actor_should_see_a_popup_with_address_deleted_inscription() {
+        theActorInTheSpotlight().should(seeThat(com.deosite.tests.questions.alert.Alert.value(), containsString("Address deleted")));
     }
 }

@@ -27,6 +27,7 @@ import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.*;
+import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.equalTo;
 
 public class DeleteFromCart {
@@ -57,15 +58,10 @@ public class DeleteFromCart {
         );
     }
 
-    @Then("she should see {string}")
-    public void actor_should_see_that_the_cart_is_empty(String message) {
-        theActorInTheSpotlight().should(seeThat(EmptyCartMessage.value(), equalTo(
-                as(theActorInTheSpotlight()).translate(message)
-        )));
-        theActorInTheSpotlight().attemptsTo(
-                WaitUntil.the(ALERT_BOX, isNotPresent()),
-                Ensure.that(DELETE_PRODUCT_BUTTON).isNotDisplayed()
-        );
+    @Then("she should see the cart is empty message")
+    public void actor_should_see_that_the_cart_is_empty() {
+        theActorInTheSpotlight().should(seeThat(EmptyCartMessage.value(), containsString("Keine Artikel im Warenkorb")
+        ));
 
     }
 }

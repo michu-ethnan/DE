@@ -31,6 +31,7 @@ import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isNotPresent;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isPresent;
+import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.equalTo;
 
 public class EditAddress {
@@ -83,14 +84,8 @@ public class EditAddress {
         );
     }
 
-    @Then("she should see that it was saved with popup saying {string}")
-    public void actor_should_see_that_it_was_saved(String message) throws InterruptedException {
-        theActorInTheSpotlight().should(seeThat(com.deosite.tests.questions.alert.Alert.value(), equalTo(
-                as(theActorInTheSpotlight()).translate(message))));
-        theActorInTheSpotlight().attemptsTo(
-
-                Ensure.that(ADD_TO_CART_BUTTON).isNotDisplayed()
-        );
-Thread.sleep(3000);
+    @Then("she should see that it was saved with popup saying address saved")
+    public void actor_should_see_that_it_was_saved(){
+        theActorInTheSpotlight().should(seeThat(com.deosite.tests.questions.alert.Alert.value(), containsString("Gespeicherte Adresse")));
     }
 }
