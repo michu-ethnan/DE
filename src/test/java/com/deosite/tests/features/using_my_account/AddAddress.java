@@ -63,7 +63,7 @@ public class AddAddress {
                 FillInAddressForm.type(userType),
                 WaitUntil.the(SUBMIT_NEW_ADDRESS_BUTTON, isPresent()),
                 Click.on(SUBMIT_NEW_ADDRESS_BUTTON),
-                WaitUntil.the(ALERT_BOX, isVisible()).forNoMoreThan(100).seconds()
+                WaitUntil.the(ALERT_BOX, isPresent()).forNoMoreThan(100).seconds()
         );
     }
 

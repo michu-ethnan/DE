@@ -3,11 +3,14 @@ package com.deosite.tests.features.using_minicart;
 import com.deosite.tests.actions.Open;
 import com.deosite.tests.actions.Search;
 import com.deosite.tests.questions.alert.Alert;
+import com.deosite.tests.questions.minicart.ProductNameInMinicart;
+import com.deosite.tests.questions.product.ProductName;
 import com.deosite.tests.steps.SetupSteps;
 import com.deosite.tests.tasks.Setup;
 import com.deosite.tests.tasks.basic.MoveMouseToTop;
 import com.deosite.tests.tasks.mainMenu.ClickCategory;
 import com.deosite.tests.tasks.product.AddProduct;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -34,6 +37,8 @@ public class AddItemsToCart {
 
     @Steps
     SetupSteps setupSteps;
+    String addedProduct;
+    String productInMinicart;
 
     @Given("that {word} has opened product page of a(n) {word}")
     public void that_actor_has_opened_product_page(String actor, String product) {
@@ -62,18 +67,25 @@ public class AddItemsToCart {
         theActorInTheSpotlight().attemptsTo(
                 WaitUntil.the(ADD_TO_CART_BUTTON, isClickable()).forNoMoreThan(100).seconds(),
                 Click.on(ADD_TO_CART_BUTTON),
-                WaitUntil.the(ALERT_BOX, isVisible()).forNoMoreThan(100).seconds()
+                WaitUntil.the(ALERT_BOX, isPresent()).forNoMoreThan(100).seconds()
         );
+        addedProduct = ProductName.productName().answeredBy(theActorInTheSpotlight());
     }
 
     @Then("(s)he should see popup with added to cart message")
     public void actor_should_see_popup_with_message() {
         theActorInTheSpotlight().should(seeThat(com.deosite.tests.questions.alert.Alert.value(), containsString("Das Produkt wurde zum Einkaufswagen hinzugefügt")));
 
-        theActorInTheSpotlight().attemptsTo(
-                Ensure.that(ALERT_BOX).isNotDisplayed()
-        );
-
 
     }
+@And("ensure that the product is in minicart")
+    public void actor_should_ensure_that_the_product_is_in_minicart(){
+    theActorInTheSpotlight().attemptsTo(
+            Open.miniCart()
+    );
+    productInMinicart = ProductNameInMinicart.productNameInMinicart().answeredBy(theActorInTheSpotlight());
+    theActorInTheSpotlight().attemptsTo();
+    Ensure.that(addedProduct).isEqualTo(productInMinicart);
+}
+
 }

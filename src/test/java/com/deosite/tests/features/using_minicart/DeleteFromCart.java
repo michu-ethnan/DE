@@ -53,7 +53,8 @@ public class DeleteFromCart {
         theActorInTheSpotlight().attemptsTo(
                 WaitUntil.the(DELETE_PRODUCT_BUTTON, isClickable()).forNoMoreThan(50).seconds(),
                 Click.on(DELETE_PRODUCT_BUTTON),
-                WaitUntil.the(DELETE_PRODUCT_BUTTON, isNotPresent()),
+                WaitUntil.the(DELETE_PRODUCT_BUTTON, isNotPresent()).forNoMoreThan(100).seconds(),
+                Ensure.that(DELETE_PRODUCT_BUTTON).isNotDisplayed(),
                 WaitUntil.the(EMPTY_CART_MESSAGE, isPresent()).forNoMoreThan(100).seconds(),
                 Ensure.that(EMPTY_CART_MESSAGE).isDisplayed()
         );

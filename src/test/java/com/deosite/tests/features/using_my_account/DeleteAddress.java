@@ -67,7 +67,7 @@ public class DeleteAddress {
         theActorInTheSpotlight().attemptsTo(
                 WaitUntil.the(DIALOG_BOX_YES_BUTTON, isClickable()),
                 Click.on(DIALOG_BOX_YES_BUTTON),
-                WaitUntil.the(ALERT_BOX, isVisible()).forNoMoreThan(100).seconds()
+                WaitUntil.the(ALERT_BOX, isPresent()).forNoMoreThan(100).seconds()
         );
     }
     @Then("he should see a popup with address deleted inscription")
