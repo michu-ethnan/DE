@@ -87,6 +87,7 @@ public class EditAddress {
     public void actor_should_see_that_it_was_saved(){
         theActorInTheSpotlight().should(seeThat(com.deosite.tests.questions.alert.Alert.value(), containsString("Gespeicherte Adresse")));
         theActorInTheSpotlight().attemptsTo(
+                WaitUntil.the(ALERT_BOX, isNotPresent()),
                 Ensure.that(ALERT_BOX).isNotDisplayed()
         );
     }

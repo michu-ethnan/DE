@@ -74,6 +74,7 @@ public class DeleteAddress {
     public void actor_should_see_a_popup_with_address_deleted_inscription() {
         theActorInTheSpotlight().should(seeThat(com.deosite.tests.questions.alert.Alert.value(), containsString("Address deleted")));
         theActorInTheSpotlight().attemptsTo(
+                WaitUntil.the(ALERT_BOX, isNotPresent()),
                 Ensure.that(ALERT_BOX).isNotDisplayed()
         );
     }
