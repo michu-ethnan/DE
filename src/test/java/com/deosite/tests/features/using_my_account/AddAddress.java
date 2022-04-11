@@ -63,14 +63,16 @@ public class AddAddress {
                 FillInAddressForm.type(userType),
                 WaitUntil.the(SUBMIT_NEW_ADDRESS_BUTTON, isPresent()),
                 Click.on(SUBMIT_NEW_ADDRESS_BUTTON),
-                WaitUntil.the(ALERT_BOX, isPresent()).forNoMoreThan(100).seconds()
+                WaitUntil.the(ALERT_BOX, isVisible()).forNoMoreThan(100).seconds()
         );
     }
 
     @Then("she should see a popup saying address saved")
     public void actor_should_find_this_address_in_the_address_book(){
         theActorInTheSpotlight().should(seeThat(com.deosite.tests.questions.alert.Alert.value(), containsString("Gespeicherte Adresse")));
-
+        theActorInTheSpotlight().attemptsTo(
+                Ensure.that(ALERT_BOX).isNotDisplayed()
+        );
 
     }
 

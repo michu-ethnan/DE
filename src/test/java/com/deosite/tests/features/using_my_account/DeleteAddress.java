@@ -67,11 +67,14 @@ public class DeleteAddress {
         theActorInTheSpotlight().attemptsTo(
                 WaitUntil.the(DIALOG_BOX_YES_BUTTON, isClickable()),
                 Click.on(DIALOG_BOX_YES_BUTTON),
-                WaitUntil.the(ALERT_BOX, isPresent()).forNoMoreThan(100).seconds()
+                WaitUntil.the(ALERT_BOX, isVisible()).forNoMoreThan(100).seconds()
         );
     }
     @Then("he should see a popup with address deleted inscription")
     public void actor_should_see_a_popup_with_address_deleted_inscription() {
         theActorInTheSpotlight().should(seeThat(com.deosite.tests.questions.alert.Alert.value(), containsString("Address deleted")));
+        theActorInTheSpotlight().attemptsTo(
+                Ensure.that(ALERT_BOX).isNotDisplayed()
+        );
     }
 }

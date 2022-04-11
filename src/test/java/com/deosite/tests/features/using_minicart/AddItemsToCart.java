@@ -62,13 +62,17 @@ public class AddItemsToCart {
         theActorInTheSpotlight().attemptsTo(
                 WaitUntil.the(ADD_TO_CART_BUTTON, isClickable()).forNoMoreThan(100).seconds(),
                 Click.on(ADD_TO_CART_BUTTON),
-                WaitUntil.the(ALERT_BOX, isPresent()).forNoMoreThan(100).seconds()
+                WaitUntil.the(ALERT_BOX, isVisible()).forNoMoreThan(100).seconds()
         );
     }
 
     @Then("(s)he should see popup with added to cart message")
-    public void actor_should_see_popup_with_message() throws InterruptedException {
+    public void actor_should_see_popup_with_message() {
         theActorInTheSpotlight().should(seeThat(com.deosite.tests.questions.alert.Alert.value(), containsString("Das Produkt wurde zum Einkaufswagen hinzugefügt")));
+
+        theActorInTheSpotlight().attemptsTo(
+                Ensure.that(ALERT_BOX).isNotDisplayed()
+        );
 
 
     }
