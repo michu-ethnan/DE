@@ -80,7 +80,7 @@ public class EditAddress {
     public void actor_saves_it(){
         theActorInTheSpotlight().attemptsTo(
                 Click.on(SUBMIT_NEW_ADDRESS_BUTTON),
-                WaitUntil.the(ALERT_BOX, isPresent())
+                WaitUntil.the(ALERT_BOX, isPresent()).forNoMoreThan(100).seconds()
         );
     }
 

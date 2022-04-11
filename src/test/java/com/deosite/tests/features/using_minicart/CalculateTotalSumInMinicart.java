@@ -37,7 +37,7 @@ public class CalculateTotalSumInMinicart {
         theActorCalled(actor).wasAbleTo(
                 Setup.site(),
                 ClickCategory.byCategoryNumber(1),
-                Open.productPageByPosition(0)
+                Open.productPageByPosition(3)
                 );
     }
 
