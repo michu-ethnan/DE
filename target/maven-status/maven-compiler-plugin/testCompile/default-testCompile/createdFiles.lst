@@ -15,14 +15,12 @@ com/deosite/tests/features/creating_orders/AddProductToCartAndOrder.class
 com/deosite/tests/OrderingLoggedInSuite_3.class
 com/deosite/tests/features/product_page/ReturnAfterClickingConfigurableProduct.class
 com/deosite/tests/features/filtering/ClearFilter.class
-com/deosite/tests/features/sorting/SortProductsAndGoToNextPage.class
 com/deosite/tests/features/navigating_website/search/QuickSearch.class
 com/deosite/tests/features/using_minicart/ChangeNumberOfProductsInMinicart.class
 com/deosite/tests/SortingSuite.class
 com/deosite/tests/LoggingInSuite.class
 com/deosite/tests/OrderingLoggedInSuite_2.class
 com/deosite/tests/OrderingTestSuite_3.class
-com/deosite/tests/features/sorting/SortingByPriceHighestFirst.class
 com/deosite/tests/features/navigating_website/BrowseCategories.class
 com/deosite/tests/features/login/LogIn.class
 com/deosite/tests/UsingMinicartSuite_2.class
