@@ -85,10 +85,8 @@ public class EditAddress {
 
     @Then("she should see that it was saved with popup saying address saved")
     public void actor_should_see_that_it_was_saved(){
-        theActorInTheSpotlight().should(seeThat(com.deosite.tests.questions.alert.Alert.value(), containsString("Gespeicherte Adresse")));
         theActorInTheSpotlight().attemptsTo(
-                WaitUntil.the(ALERT_BOX, isNotPresent()),
-                Ensure.that(ALERT_BOX).isNotDisplayed()
+                Ensure.that(ALERT_BOX).isDisplayed()
         );
     }
 }

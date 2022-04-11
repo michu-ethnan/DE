@@ -21,6 +21,7 @@ import net.thucydides.core.annotations.Steps;
 
 import static com.deosite.tests.abilities.Load.as;
 import static com.deosite.tests.pages.Alert.ALERT_BOX;
+import static com.deosite.tests.pages.Alert.CLOSE_ALERT_BOX_BUTTON;
 import static com.deosite.tests.pages.CategoryPage.CATEGORY_HEADER;
 import static com.deosite.tests.pages.LoginPage.SUBMIT_BUTTON;
 import static com.deosite.tests.pages.MainMenu.SEARCH_BAR;
@@ -60,6 +61,7 @@ public class AddItemsToCart {
                 WaitUntil.the(CATEGORY_HEADER, isPresent()),
                 Open.productPageByPosition(0)
         );
+        addedProduct = ProductName.productName().answeredBy(theActorInTheSpotlight());
     }
 
     @When("(s)he tries to add it to cart")
@@ -68,13 +70,17 @@ public class AddItemsToCart {
                 WaitUntil.the(ADD_TO_CART_BUTTON, isClickable()).forNoMoreThan(100).seconds(),
                 Click.on(ADD_TO_CART_BUTTON),
                 WaitUntil.the(ALERT_BOX, isPresent()).forNoMoreThan(100).seconds()
+
         );
-        addedProduct = ProductName.productName().answeredBy(theActorInTheSpotlight());
+
     }
 
     @Then("(s)he should see popup with added to cart message")
     public void actor_should_see_popup_with_message() {
-        theActorInTheSpotlight().should(seeThat(com.deosite.tests.questions.alert.Alert.value(), containsString("Das Produkt wurde zum Einkaufswagen hinzugefügt")));
+       theActorInTheSpotlight().attemptsTo(
+               Ensure.that(ALERT_BOX).isDisplayed(),
+               Click.on(CLOSE_ALERT_BOX_BUTTON)
+       );
 
 
     }

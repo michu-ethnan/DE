@@ -69,10 +69,8 @@ public class AddAddress {
 
     @Then("she should see a popup saying address saved")
     public void actor_should_find_this_address_in_the_address_book(){
-        theActorInTheSpotlight().should(seeThat(com.deosite.tests.questions.alert.Alert.value(), containsString("Gespeicherte Adresse")));
         theActorInTheSpotlight().attemptsTo(
-                WaitUntil.the(ALERT_BOX, isNotPresent()),
-                Ensure.that(ALERT_BOX).isNotDisplayed()
+                Ensure.that(ALERT_BOX).isDisplayed()
         );
 
     }
