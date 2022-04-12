@@ -63,18 +63,17 @@ public class AddAddress {
                 Click.on(ADD_NEW_ADDRESS_BUTTON),
                 WaitUntil.the(AccountPage.MY_ACCOUNT_SUBHEADER, containsText("Neue Adresse")),
                 FillInAddressForm.type(userType),
-                Click.on(SUBMIT_NEW_ADDRESS_BUTTON),
-                MoveMouse.to(ALERT_BOX)
+                Click.on(SUBMIT_NEW_ADDRESS_BUTTON)
+
         );
-        Thread.sleep(2000);
+
     }
 
     @Then("she should see a popup saying address saved")
     public void actor_should_find_this_address_in_the_address_book(){
         theActorInTheSpotlight().attemptsTo(
-              WaitUntil.the(ALERT_BOX, isCurrentlyVisible())
+                Ensure.that(SUBMIT_NEW_ADDRESS_BUTTON).isNotDisplayed()
         );
-
     }
 
 }
