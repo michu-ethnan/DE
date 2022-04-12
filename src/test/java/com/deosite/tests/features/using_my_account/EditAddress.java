@@ -14,6 +14,7 @@ import io.cucumber.java.en.When;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import net.serenitybdd.screenplay.actions.Click;
+import net.serenitybdd.screenplay.actions.MoveMouse;
 import net.serenitybdd.screenplay.ensure.Ensure;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 import net.thucydides.core.annotations.Steps;
@@ -81,10 +82,9 @@ public class EditAddress {
     public void actor_saves_it() throws InterruptedException {
         theActorInTheSpotlight().attemptsTo(
                 Click.on(SUBMIT_NEW_ADDRESS_BUTTON),
-                WaitUntil.the(ALERT_BOX, isPresent()).forNoMoreThan(100).seconds()
+                MoveMouse.to(ALERT_BOX)
         );
-        Thread.sleep(2000);
-    }
+        Thread.sleep(2000); }
 
     @Then("she should see that it was saved with popup saying address saved")
     public void actor_should_see_that_it_was_saved(){
