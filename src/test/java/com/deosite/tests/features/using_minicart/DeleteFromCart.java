@@ -18,6 +18,7 @@ import net.thucydides.core.annotations.Steps;
 
 import static com.deosite.tests.abilities.Load.as;
 import static com.deosite.tests.pages.Alert.ALERT_BOX;
+import static com.deosite.tests.pages.Alert.CLOSE_ALERT_BOX_BUTTON;
 import static com.deosite.tests.pages.LoginPage.SUBMIT_BUTTON;
 import static com.deosite.tests.pages.MiniCart.MINICART_BUTTON;
 import static com.deosite.tests.pages.MiniCart.DELETE_PRODUCT_BUTTON;
@@ -44,7 +45,8 @@ public class DeleteFromCart {
                 WaitUntil.the(PRODUCTS_TITLE, isPresent()).forNoMoreThan(50).seconds(),
                 Open.productPageByPosition(0),
                 AddProduct.toCart(),
-                Open.miniCart()
+                Click.on(CLOSE_ALERT_BOX_BUTTON),
+                Click.on(MINICART_BUTTON)
         );
     }
 
