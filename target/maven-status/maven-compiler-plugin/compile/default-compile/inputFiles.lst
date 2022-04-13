@@ -92,6 +92,7 @@
 /home/deosite/DE/src/main/java/com/deosite/tests/tasks/order/FillInBillingData.java
 /home/deosite/DE/src/main/java/com/deosite/tests/tasks/product/MoveMouseDown.java
 /home/deosite/DE/src/main/java/com/deosite/tests/tasks/categoryPage/SelectSortingOption.java
+/home/deosite/DE/src/main/java/com/deosite/tests/tasks/categoryPage/OpenInspirations.java
 /home/deosite/DE/src/main/java/com/deosite/tests/tasks/categoryPage/EnsurePageContent.java
 /home/deosite/DE/src/main/java/com/deosite/tests/i18n/Bundle_de_DE.java
 /home/deosite/DE/src/main/java/com/deosite/tests/model/order/Personal.java

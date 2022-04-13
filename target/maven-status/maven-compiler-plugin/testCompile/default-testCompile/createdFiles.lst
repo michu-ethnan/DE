@@ -30,9 +30,11 @@ com/deosite/tests/features/checkout/SelectDifferentCountry.class
 com/deosite/tests/features/filtering/ApplyFilterAndGoToNextPage.class
 com/deosite/tests/features/navigating_website/GoToNextPage.class
 com/deosite/tests/UsingMyAccountSuite.class
+com/deosite/tests/features/creating_orders/OrderProductsFromCategories.class
 com/deosite/tests/OrderingLoggedInSuite_1.class
 com/deosite/tests/features/navigating_website/SelectLanguage.class
 com/deosite/tests/features/using_minicart/DeleteFromCartAndCheckTotalSum.class
+com/deosite/tests/OrderFromCategoriesSuite.class
 com/deosite/tests/CucumberTestSuite.class
 com/deosite/tests/OrderingTestSuite_1.class
 com/deosite/tests/features/using_my_account/EditAddress.class

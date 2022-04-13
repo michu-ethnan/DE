@@ -13,6 +13,7 @@
 /home/deosite/DE/src/test/java/com/deosite/tests/features/navigating_website/GoToNextPage.java
 /home/deosite/DE/src/test/java/com/deosite/tests/features/sorting/SortingByPriceLowestFirst.java
 /home/deosite/DE/src/test/java/com/deosite/tests/features/filtering/ApplyFilterAndGoToNextPage.java
+/home/deosite/DE/src/test/java/com/deosite/tests/features/creating_orders/OrderProductsFromCategories.java
 /home/deosite/DE/src/test/java/com/deosite/tests/OrderingLoggedInSuite_3.java
 /home/deosite/DE/src/test/java/com/deosite/tests/features/navigating_website/SelectLanguage.java
 /home/deosite/DE/src/test/java/com/deosite/tests/features/using_minicart/CalculateTotalSumInMinicart.java
@@ -25,6 +26,7 @@
 /home/deosite/DE/src/test/java/com/deosite/tests/features/filtering/ApplyRangeFilter.java
 /home/deosite/DE/src/test/java/com/deosite/tests/features/using_my_account/DeleteAddress.java
 /home/deosite/DE/src/test/java/com/deosite/tests/features/login/LogInUsingDifferentEmailAddress.java
+/home/deosite/DE/src/test/java/com/deosite/tests/OrderFromCategoriesSuite.java
 /home/deosite/DE/src/test/java/com/deosite/tests/features/navigating_website/SelectPage.java
 /home/deosite/DE/src/test/java/com/deosite/tests/features/checkout/AddTwoDifferentProductsAndGoToCheckout.java
 /home/deosite/DE/src/test/java/com/deosite/tests/LoggingInSuite.java

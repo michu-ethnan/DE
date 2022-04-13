@@ -133,6 +133,7 @@ com/deosite/tests/questions/account/OrderImage.class
 com/deosite/tests/pages/SearchPage.class
 com/deosite/tests/model/minicart/ChangeQuantity.class
 com/deosite/tests/questions/login/Value.class
+com/deosite/tests/tasks/categoryPage/OpenInspirations.class
 com/deosite/tests/tasks/categoryPage/SelectPageNumber.class
 com/deosite/tests/pages/Alert.class
 com/deosite/tests/pages/CategoryTopBanner.class
