@@ -53,9 +53,10 @@ public class DeleteFromCart {
     @When("she deletes it")
     public void actor_deletes_it() {
         theActorInTheSpotlight().attemptsTo(
+                WaitUntil.the(DELETE_PRODUCT_BUTTON, isClickable()),
                 Click.on(DELETE_PRODUCT_BUTTON),
-                WaitUntil.the(EMPTY_CART_MESSAGE, isPresent()),
-                Ensure.that(EMPTY_CART_MESSAGE).isDisplayed()
+                WaitUntil.the(EMPTY_CART_MESSAGE, isPresent()).forNoMoreThan(100).seconds(),
+                Ensure.that(SUBMIT_BUTTON).isNotDisplayed()
         );
     }
 
