@@ -20,9 +20,7 @@ import static com.deosite.tests.abilities.Load.as;
 import static com.deosite.tests.pages.Alert.ALERT_BOX;
 import static com.deosite.tests.pages.Alert.CLOSE_ALERT_BOX_BUTTON;
 import static com.deosite.tests.pages.LoginPage.SUBMIT_BUTTON;
-import static com.deosite.tests.pages.MiniCart.MINICART_BUTTON;
-import static com.deosite.tests.pages.MiniCart.DELETE_PRODUCT_BUTTON;
-import static com.deosite.tests.pages.MiniCart.EMPTY_CART_MESSAGE;
+import static com.deosite.tests.pages.MiniCart.*;
 import static com.deosite.tests.pages.SearchPage.PRODUCTS_TITLE;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
@@ -46,15 +44,17 @@ public class DeleteFromCart {
                 Open.productPageByPosition(0),
                 AddProduct.toCart(),
                 Click.on(CLOSE_ALERT_BOX_BUTTON),
-                Click.on(MINICART_BUTTON)
+                Click.on(MINICART_BUTTON),
+                WaitUntil.the(GO_TO_CHECKOUT_BUTTON, isEnabled()),
+                WaitUntil.the(GO_TO_CHECKOUT_BUTTON, isClickable())
         );
     }
 
     @When("she deletes it")
     public void actor_deletes_it() {
         theActorInTheSpotlight().attemptsTo(
-                WaitUntil.the(DELETE_PRODUCT_BUTTON, isClickable()),
                 Click.on(DELETE_PRODUCT_BUTTON),
+                WaitUntil.the(EMPTY_CART_MESSAGE, isPresent()),
                 Ensure.that(EMPTY_CART_MESSAGE).isDisplayed()
         );
     }

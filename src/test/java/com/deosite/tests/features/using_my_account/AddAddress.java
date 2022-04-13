@@ -63,7 +63,8 @@ public class AddAddress {
                 Click.on(ADD_NEW_ADDRESS_BUTTON),
                 WaitUntil.the(AccountPage.MY_ACCOUNT_SUBHEADER, containsText("Neue Adresse")),
                 FillInAddressForm.type(userType),
-                Click.on(SUBMIT_NEW_ADDRESS_BUTTON)
+                Click.on(SUBMIT_NEW_ADDRESS_BUTTON),
+                WaitUntil.the(ALERT_BOX, isPresent()).forNoMoreThan(10).seconds()
 
         );
 
