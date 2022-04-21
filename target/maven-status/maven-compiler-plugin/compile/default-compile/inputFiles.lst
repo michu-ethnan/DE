@@ -16,7 +16,6 @@
 /home/deosite/DE/src/main/java/com/deosite/tests/questions/checkout/DiscountPrice.java
 /home/deosite/DE/src/main/java/com/deosite/tests/tasks/SetupWithoutAcceptingCookies.java
 /home/deosite/DE/src/main/java/com/deosite/tests/questions/minicart/NumberOfProducts.java
-/home/deosite/DE/src/main/java/com/deosite/tests/tasks/order/ChoosePickupLocation.java
 /home/deosite/DE/src/main/java/com/deosite/tests/questions/homeapge/PageTitle.java
 /home/deosite/DE/src/main/java/com/deosite/tests/model/order/Order.java
 /home/deosite/DE/src/main/java/com/deosite/tests/tasks/minicart/DecreaseNumberOfProducts.java
@@ -86,7 +85,9 @@
 /home/deosite/DE/src/main/java/com/deosite/tests/actions/SearchForTranslatedProducts.java
 /home/deosite/DE/src/main/java/com/deosite/tests/pages/CategoryTopBanner.java
 /home/deosite/DE/src/main/java/com/deosite/tests/questions/minicart/MinicartHeader.java
+/home/deosite/DE/src/main/java/com/deosite/tests/tasks/order/SelectBillingCountry.java
 /home/deosite/DE/src/main/java/com/deosite/tests/tasks/product/AddToCart.java
+/home/deosite/DE/src/main/java/com/deosite/tests/tasks/order/SelectShippingAddress.java
 /home/deosite/DE/src/main/java/com/deosite/tests/tasks/categoryPage/ClickFilterButton.java
 /home/deosite/DE/src/main/java/com/deosite/tests/tasks/homePage/MoveMouseToBottom.java
 /home/deosite/DE/src/main/java/com/deosite/tests/tasks/order/FillInBillingData.java
@@ -96,6 +97,8 @@
 /home/deosite/DE/src/main/java/com/deosite/tests/tasks/categoryPage/EnsurePageContent.java
 /home/deosite/DE/src/main/java/com/deosite/tests/i18n/Bundle_de_DE.java
 /home/deosite/DE/src/main/java/com/deosite/tests/model/order/Personal.java
+/home/deosite/DE/src/main/java/com/deosite/tests/tasks/order/Place.java
+/home/deosite/DE/src/main/java/com/deosite/tests/tasks/order/SelectPickupLocationByName.java
 /home/deosite/DE/src/main/java/com/deosite/tests/questions/checkout/GetShippingPrice.java
 /home/deosite/DE/src/main/java/com/deosite/tests/tasks/Setup.java
 /home/deosite/DE/src/main/java/com/deosite/tests/model/minicart/ChangeQuantity.java
@@ -107,13 +110,17 @@
 /home/deosite/DE/src/main/java/com/deosite/tests/i18n/Bundle_sv_SE.java
 /home/deosite/DE/src/main/java/com/deosite/tests/tasks/account/FillInAddressForm.java
 /home/deosite/DE/src/main/java/com/deosite/tests/pages/MainMenu.java
+/home/deosite/DE/src/main/java/com/deosite/tests/tasks/homePage/SelectLanguage.java
 /home/deosite/DE/src/main/java/com/deosite/tests/actions/SearchForProducts.java
 /home/deosite/DE/src/main/java/com/deosite/tests/questions/minicart/EmptyCartMessage.java
+/home/deosite/DE/src/main/java/com/deosite/tests/tasks/order/SelectBillingAddress.java
 /home/deosite/DE/src/main/java/com/deosite/tests/pages/Alert.java
 /home/deosite/DE/src/main/java/com/deosite/tests/questions/minicart/Value.java
 /home/deosite/DE/src/main/java/com/deosite/tests/questions/minicart/MinicartWebelement.java
+/home/deosite/DE/src/main/java/com/deosite/tests/tasks/order/SelectPickUpLocation.java
 /home/deosite/DE/src/main/java/com/deosite/tests/model/login/LoginForm.java
 /home/deosite/DE/src/main/java/com/deosite/tests/i18n/Bundle_cs_CZ.java
+/home/deosite/DE/src/main/java/com/deosite/tests/tasks/order/PlaceAfterLogin.java
 /home/deosite/DE/src/main/java/com/deosite/tests/questions/account/OrderNumber.java
 /home/deosite/DE/src/main/java/com/deosite/tests/questions/product/QuickSearchProductName.java
 /home/deosite/DE/src/main/java/com/deosite/tests/pages/SuccessPage.java

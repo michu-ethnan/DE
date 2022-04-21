@@ -39,6 +39,7 @@ public class Bundle_pl_PL extends ListResourceBundle {
                 {"Świat dziecka header", "Kinderwelt "},
                 {"Nowości header", "Neu "},
                 {"Wyprzedaż header", "Sale "},
+                {"Promocje header", "Promocje - Kupuj Taniej!"},
                 {"Marki header", "Marken"},
 
 
@@ -60,29 +61,27 @@ public class Bundle_pl_PL extends ListResourceBundle {
                         "Test-Test",
                         "Testowa 1",
                         "Testowo",
-                        "Deutschland",
+                        "11-111",
+                        "123456789"
+
+                )},
+                {"personFromPortugal", new Personal(
+                        "test@test.pl",
+                        "Test",
+                        "Test-Test",
+                        "Testowa 1",
+                        "Testowo",
                         "11-111",
                         "123456789"
                 )},
-                {"personFromNetherlands", new Personal(
+                {"personFromIreland", new Personal(
                         "test@test.pl",
                         "Test",
                         "Test-Test",
-                        "Test 1",
-                        "Test",
-                        "Niederlande",
-                        "00-000",
-                        "0000000000"
-                )},
-                {"personFromDänemark", new Personal(
-                        "test@test.pl",
-                        "Test",
-                        "Test-Test",
-                        "Test 1",
-                        "Test",
-                        "Dänemark",
-                        "00-000",
-                        "0000000000"
+                        "Testowa 1",
+                        "Testowo",
+                        "11-111",
+                        "123456789"
                 )},
                 {"company", new Company(
                         "test@test.pl",
@@ -90,20 +89,19 @@ public class Bundle_pl_PL extends ListResourceBundle {
                         "Test-Test",
                         "Testowa 1",
                         "Testowo",
-                        "Deutschland",
                         "11-111",
                         "123456789",
                         "Testowa sp. z o.o",
                         "1234567891"
+
                 )},
                 {"withoutEmailAddress", new WithoutEmailAddress(
                         "Test",
                         "Test-Test",
-                        "Test 1",
-                        "Test",
-                        "Deutschland",
-                        "00-000",
-                        "0000000000"
+                        "Testowa 1",
+                        "Testowo",
+                        "11-111",
+                        "123456789"
                 )},
                 {"login", new LoginForm(
                         "tester-email-tester@yandex.com",

@@ -3,11 +3,7 @@ package com.deosite.tests.tasks.homePage;
 import net.serenitybdd.core.steps.Instrumented;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
-import net.serenitybdd.screenplay.actions.Click;
 import net.thucydides.core.annotations.Step;
-
-
-import static com.deosite.tests.pages.HomePage.SELECT_LANGUAGE;
 
 public class ChooseLanguage implements Task {
 
@@ -21,62 +17,62 @@ public class ChooseLanguage implements Task {
     public <T extends Actor> void performAs(T actor){
         if (chooseLanguage.contains("Czech")){
             actor.attemptsTo(
-
+                    SelectLanguage.byIndexNumber(0)
             );
-            SELECT_LANGUAGE.resolveFor(actor).selectByValue("cz");
+
         }
         if (chooseLanguage.contains("Poland")){
             actor.attemptsTo(
-
+SelectLanguage.byIndexNumber(4)
             );
-            SELECT_LANGUAGE.resolveFor(actor).selectByValue("pl");
+
 
         }
         if (chooseLanguage.contains("Spanish")){
-            actor.attemptsTo();
-            SELECT_LANGUAGE.resolveFor(actor).selectByValue("es");
+            actor.attemptsTo(SelectLanguage.byIndexNumber(2));
+
 
         }
         if (chooseLanguage.contains("France")){
             actor.attemptsTo(
-
+SelectLanguage.byIndexNumber(3)
             );
-            SELECT_LANGUAGE.resolveFor(actor).selectByValue("fr");
+
 
         }
         if (chooseLanguage.contains("Italy")){
             actor.attemptsTo(
-
+SelectLanguage.byIndexNumber(5)
             );
-            SELECT_LANGUAGE.resolveFor(actor).selectByValue("it");
+
 
         }
         if (chooseLanguage.contains("GB")){
             actor.attemptsTo(
-
+SelectLanguage.byIndexNumber(6)
             );
-            SELECT_LANGUAGE.resolveFor(actor).selectByValue("gb");
+
 
         }
         if (chooseLanguage.contains("Romania")){
             actor.attemptsTo(
-
+SelectLanguage.byIndexNumber(7)
             );
-            SELECT_LANGUAGE.resolveFor(actor).selectByValue("ro");
+
 
         }
         if (chooseLanguage.contains("Sweden")){
             actor.attemptsTo(
-
+SelectLanguage.byIndexNumber(8)
             );
-            SELECT_LANGUAGE.resolveFor(actor).selectByValue("se");
+
 
         }
         if (chooseLanguage.contains("Slovakia")){
             actor.attemptsTo(
-
+SelectLanguage.byIndexNumber(9)
             );
-            SELECT_LANGUAGE.resolveFor(actor).selectByValue("sk");
+
         }
 
     }

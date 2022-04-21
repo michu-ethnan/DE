@@ -94,7 +94,9 @@ public class OrderProductsLoggedIn {
     @And("he changes billing address")
     public void actor_changes_billing_address() {
         theActorInTheSpotlight().attemptsTo(
-                ChangeBillingAddress.changeBillingAddress());
+                Click.on(CheckoutPage.BILLING_ADDRESS_SELECT),
+                SelectBillingAddress.byBillingAddress(1)
+        );
     }
 
     @And("he clicks the same shipping address checkbox")
@@ -108,7 +110,9 @@ public class OrderProductsLoggedIn {
     @And("he changes shipping address")
     public void actor_changes_shipping_address() {
         theActorInTheSpotlight().attemptsTo(
-                ChangeShippingAddress.changeShippingAddress());
+                Click.on(CheckoutPage.SHIPPING_ADDRESS_CHECKBOX),
+                Click.on(CheckoutPage.SHIPPING_ADDRESS_SELECT),
+                SelectShippingAddress.byShippingAddress(1));
     }
 
     @And("he selects {word} payment")

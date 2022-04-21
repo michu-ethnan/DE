@@ -44,9 +44,7 @@ public class DeleteFromCart {
                 Open.productPageByPosition(0),
                 AddProduct.toCart(),
                 Click.on(CLOSE_ALERT_BOX_BUTTON),
-                Click.on(MINICART_BUTTON),
-                WaitUntil.the(GO_TO_CHECKOUT_BUTTON, isEnabled()),
-                WaitUntil.the(GO_TO_CHECKOUT_BUTTON, isClickable())
+                Click.on(MINICART_BUTTON)
         );
     }
 
@@ -55,8 +53,7 @@ public class DeleteFromCart {
         theActorInTheSpotlight().attemptsTo(
                 WaitUntil.the(DELETE_PRODUCT_BUTTON, isClickable()),
                 Click.on(DELETE_PRODUCT_BUTTON),
-                WaitUntil.the(EMPTY_CART_MESSAGE, isPresent()).forNoMoreThan(100).seconds(),
-                Ensure.that(SUBMIT_BUTTON).isNotDisplayed()
+                Ensure.that(EMPTY_CART_MESSAGE).isDisplayed()
         );
     }
 

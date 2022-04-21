@@ -8,9 +8,7 @@ import net.serenitybdd.screenplay.waits.WaitUntil;
 import net.thucydides.core.annotations.Step;
 
 import static com.deosite.tests.pages.CheckoutPage.SUBMIT_BUTTON;
-import static com.deosite.tests.pages.PaymentPage.PLACE_ORDER_BUTTON;
-import static com.deosite.tests.pages.PaymentPage.TRANSFER_PAYMENT_CHECKBOX;
-import static com.deosite.tests.pages.PaymentPage.PICKUP_PAYMENT_CHECKBOX;
+import static com.deosite.tests.pages.PaymentPage.*;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isClickable;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isPresent;
 
@@ -31,10 +29,13 @@ public class Pay implements Task {
                 WaitUntil.the(PLACE_ORDER_BUTTON, isPresent()).forNoMoreThan(100).seconds()
         );
         switch (paymentType) {
-            case "paypal":
+            case "card":
                 break;
             case "transfer":
                 actor.attemptsTo(Click.on(TRANSFER_PAYMENT_CHECKBOX));
+                break;
+            case "pickup":
+                actor.attemptsTo(Click.on(PICKUP_PAYMENT_CHECKBOX));
                 break;
         }
     }
