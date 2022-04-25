@@ -133,6 +133,7 @@ com/deosite/tests/tasks/account/SelectOrder.class
 com/deosite/tests/model/login/LogIn.class
 com/deosite/tests/questions/account/LoginButton.class
 com/deosite/tests/tasks/login/SubmitLoginForm.class
+com/deosite/tests/tasks/categoryPage/ApplyFilters.class
 com/deosite/tests/tasks/login/FillInLoginForm.class
 com/deosite/tests/questions/account/OrderImage.class
 com/deosite/tests/pages/SearchPage.class

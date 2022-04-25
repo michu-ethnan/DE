@@ -69,6 +69,7 @@
 /home/deosite/DE/src/main/java/com/deosite/tests/questions/payment/GetTotalSumOnPaymentPage.java
 /home/deosite/DE/src/main/java/com/deosite/tests/questions/login/LoginButton.java
 /home/deosite/DE/src/main/java/com/deosite/tests/questions/product/ProductPrice.java
+/home/deosite/DE/src/main/java/com/deosite/tests/tasks/categoryPage/ApplyFilters.java
 /home/deosite/DE/src/main/java/com/deosite/tests/i18n/Bundle_it_IT.java
 /home/deosite/DE/src/main/java/com/deosite/tests/tasks/homePage/ChooseLanguage.java
 /home/deosite/DE/src/main/java/com/deosite/tests/tasks/order/CheckoutWithProduct.java

@@ -25,6 +25,8 @@
 /home/deosite/DE/src/test/java/com/deosite/tests/SortingSuite.java
 /home/deosite/DE/src/test/java/com/deosite/tests/features/filtering/ApplyRangeFilter.java
 /home/deosite/DE/src/test/java/com/deosite/tests/features/using_my_account/DeleteAddress.java
+/home/deosite/DE/src/test/java/com/deosite/tests/features/filtering/ApplyFiltersAndRefresh.java
+/home/deosite/DE/src/test/java/com/deosite/tests/ApplyAllFiltersSuite.java
 /home/deosite/DE/src/test/java/com/deosite/tests/features/login/LogInUsingDifferentEmailAddress.java
 /home/deosite/DE/src/test/java/com/deosite/tests/OrderFromCategoriesSuite.java
 /home/deosite/DE/src/test/java/com/deosite/tests/features/navigating_website/SelectPage.java
