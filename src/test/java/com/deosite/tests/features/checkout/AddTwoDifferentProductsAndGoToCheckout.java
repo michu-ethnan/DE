@@ -1,11 +1,8 @@
 package com.deosite.tests.features.checkout;
 
 import com.deosite.tests.actions.Open;
-import com.deosite.tests.actions.OpenProductPage;
 import com.deosite.tests.pages.CheckoutPage;
 import com.deosite.tests.pages.PaymentPage;
-import com.deosite.tests.pages.ProductPage;
-import com.deosite.tests.questions.product.ProductName;
 import com.deosite.tests.steps.SetupSteps;
 import com.deosite.tests.tasks.Setup;
 import com.deosite.tests.tasks.basic.MoveMouseToTop;
@@ -13,14 +10,11 @@ import com.deosite.tests.tasks.basic.ReturnToPreviousPage;
 import com.deosite.tests.tasks.mainMenu.ClickCategory;
 import com.deosite.tests.tasks.order.FillInBillingData;
 import com.deosite.tests.tasks.product.AddProduct;
-import com.deosite.tests.tasks.product.AddToCart;
 import com.deosite.tests.tasks.product.MoveMouseDown;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.cucumber.java.en_scouse.An;
-import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.MoveMouse;
 import net.serenitybdd.screenplay.actions.Scroll;

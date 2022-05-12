@@ -82,7 +82,7 @@ public class SortingByPriceHighestFirst {
 @And("she sees the first price")
     public void actor_sees_first_price(){
     theActorInTheSpotlight().attemptsTo(
-            Open.productPageByPosition(),
+            Open.productPageManually(1),
             WaitUntil.the(ProductPage.PRODUCT_PRICE, isPresent()).forNoMoreThan(50).seconds()
 
     );
@@ -94,7 +94,7 @@ public void actor_sees_second_price(){
     theActorInTheSpotlight().attemptsTo(
             Scroll.to(SEARCH_BAR),
             ReturnToPreviousPage.goToPreviousPage(),
-            Open.productPageByPosition()
+            Open.productPageManually(10)
     );
     secondProductPrice= ProductPrice.price().answeredBy(theActorInTheSpotlight());
 }

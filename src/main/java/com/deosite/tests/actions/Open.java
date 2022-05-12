@@ -1,8 +1,6 @@
 package com.deosite.tests.actions;
 
-import com.deosite.tests.tasks.product.AddToCartFromPdp;
 import net.serenitybdd.core.steps.Instrumented;
-import net.serenitybdd.screenplay.Task;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
@@ -16,9 +14,13 @@ public class Open {
         return new OpenCheckoutPage();
     }
 
-    public static OpenProductPage productPageByPosition() {
-        return instrumented(OpenProductPage.class);
+    public static OpenProductPageRandomly productPageByPosition() {
+        return instrumented(OpenProductPageRandomly.class);
 
+    }
+
+    public static OpenProductPageManually productPageManually(int position) {
+        return Instrumented.instanceOf(OpenProductPageManually.class).withProperties(position);
     }
 
     public static OpenLoginPage loginPage() {

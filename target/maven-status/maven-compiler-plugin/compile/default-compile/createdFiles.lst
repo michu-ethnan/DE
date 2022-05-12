@@ -57,6 +57,7 @@ com/deosite/tests/i18n/Bundle_de_DE.class
 com/deosite/tests/questions/payment/GetTotalSumOnPaymentPage.class
 com/deosite/tests/questions/product/Product.class
 com/deosite/tests/tasks/categoryPage/ClickCollectionBanner.class
+com/deosite/tests/actions/OpenProductPageManually.class
 com/deosite/tests/questions/checkout/GetTotalSum.class
 com/deosite/tests/tasks/product/ReturnAndAddAnotherProduct.class
 com/deosite/tests/questions/minicart/EmptyCartMessage.class
@@ -75,7 +76,6 @@ com/deosite/tests/model/order/Order.class
 com/deosite/tests/tasks/product/MoveMouseDown.class
 com/deosite/tests/tasks/Setup.class
 com/deosite/tests/tasks/homePage/CurrentUrl.class
-com/deosite/tests/actions/OpenProductPage.class
 com/deosite/tests/model/account/NewAddress.class
 com/deosite/tests/tasks/account/ClearAddressForm.class
 com/deosite/tests/questions/homeapge/PageTitle.class
@@ -125,6 +125,7 @@ com/deosite/tests/tasks/brandPage/ClickBrand.class
 com/deosite/tests/questions/category/Value.class
 com/deosite/tests/i18n/Bundle_it_IT.class
 com/deosite/tests/model/order/WithoutEmailAddress.class
+com/deosite/tests/actions/OpenProductPageRandomly.class
 com/deosite/tests/model/minicart/QuanityChange.class
 com/deosite/tests/tasks/product/AddToCart.class
 com/deosite/tests/questions/register/RandomEmailAddress.class
