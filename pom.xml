@@ -274,11 +274,12 @@
                                  <include>**/NavigatingWebsiteSuite_1*.java</include>
                                  <include>**/NavigatingWebsiteSuite_2*.java</include>
                                  <include>**/SortingSuite*.java</include>
-                                 <include>**/UsingMinicartSuite_1*.java</include>
+                                 <include>**/UsingMinicartSuite_2*.java</include>
                                 <include>**/UsingMinicartSuite_2*.java</include>
-                                <include>**/UsingMyAccountSuite*.java</include>
-                                <include>**/ProductPageSuite*.java</include>
-                                <include>**/OrderFromCategoriesSuite*.java</include>
+                               <include>**/UsingMyAccountSuite*.java</include>
+                               <include>**/ProductPageSuite*.java</include>
+                               <include>**/OrderFromCategoriesSuite*.java</include>
+                               <include>**/OrderProductsFromBrandsPage*.java</include>
 
                             </includes>
                             <parallel>suites</parallel>

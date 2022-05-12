@@ -33,10 +33,16 @@ public class CategoryPage {
     public static Target INSPIRATIONS = Target.the("Inspirations").locatedBy("//div[@class=\"css-1pq9bkx\"]");
     public static Target GO_TO_MAIN_PAGE_BUTTON = Target.the("Go to main page button").locatedBy("//div[@class=\"css-1c8xiaf\"]");
     public static Target INSPIRATION_LIST = Target.the("Inspirations list").locatedBy("//div[@class=\"css-u8jc59\"]//..//a");
+
+    public static Target PROMOTION_LIST = Target.the("Inspirations list").locatedBy("//div[@class=\"css-1pq9bkx\"]//..//a");
+
     public static Target ALL_FILTERS_BUTTON = Target.the("All filters button").locatedBy("(//div[@data-test='filters-container-desktop']//button)[14]");
 
-    public static Target ALL_FILTERS_BUTTON_AFTER_APPLYING_FILTER = Target.the("All filters button").locatedBy("(//div[@data-test='filters-container-desktop']//button)[12]");
+    public static Target ALL_FILTERS_BUTTON_AFTER_APPLYING_FILTER = Target.the("All filters button").locatedBy("(//div[@data-test='filters-container-desktop']//button)[13]");
 
-
+    public static Target FIRST_PROMOTION_BANNER = Target.the("First promotion banner").locatedBy("//*[@id=\"__app__\"]/div[2]/div[3]/div/div[2]/div/div/div[2]/div/div[1]/div");
+    public static Target SECOND_PROMOTION_BANNER = Target.the("Second promotion banner").locatedBy("//*[@id=\"__app__\"]/div[2]/div[3]/div/div[2]/div/div/div[2]/div/div[2]/div/div[1]");
+    public static Target THIRD_PROMOTION_BANNER = Target.the("Third promotion banner").locatedBy("//*[@id=\"__app__\"]/div[2]/div[3]/div/div[2]/div/div/div[2]/div/div[3]/div");
+    public static Target FOURTH_PROMOTION_BANNER = Target.the("Fourth promotion banner").locatedBy("//*[@id=\"__app__\"]/div[2]/div[3]/div/div[2]/div/div/div[2]/div/div[4]/div");
 
 }

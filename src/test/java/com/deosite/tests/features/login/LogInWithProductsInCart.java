@@ -45,7 +45,7 @@ public class LogInWithProductsInCart {
         theActorCalled(actor).wasAbleTo(
                 Setup.site(),
                 ClickCategory.byCategoryNumber(5),
-                Open.productPageByPosition(7),
+                Open.productPageByPosition(),
                 AddProduct.toCart()
         );
         productInCartBeforeLogin = ProductName.productName().answeredBy(theActorInTheSpotlight());

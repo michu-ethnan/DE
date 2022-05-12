@@ -81,7 +81,7 @@ public class SortingByPriceLowestFirst {
     @And("she sees the value of the first price")
     public void emilia_sees_the_first_price(){
         theActorInTheSpotlight().attemptsTo(
-                Open.productPageByPosition(0)
+                Open.productPageByPosition()
         );
         firstProductPrice= ProductPrice.price().answeredBy(theActorInTheSpotlight());
 
@@ -91,7 +91,7 @@ public class SortingByPriceLowestFirst {
         theActorInTheSpotlight().attemptsTo(
                 Scroll.to(SEARCH_BAR),
                 ReturnToPreviousPage.goToPreviousPage(),
-                Open.productPageByPosition(10)
+                Open.productPageByPosition()
         );
         secondProductPrice= ProductPrice.price().answeredBy(theActorInTheSpotlight());
     }

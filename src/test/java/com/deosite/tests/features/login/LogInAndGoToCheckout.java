@@ -45,7 +45,7 @@ public class LogInAndGoToCheckout {
         theActorCalled(actor).wasAbleTo(
                 Setup.site(),
                 ClickCategory.byCategoryNumber(4),
-                Open.productPageByPosition(7),
+                Open.productPageByPosition(),
                 AddProduct.toCart(),
                 ReturnToPreviousPage.goToPreviousPage()
         );

@@ -41,7 +41,7 @@ public class DeleteFromCart {
                 Search.forProductByTranslatedKeyword(product),
                 MoveMouseToTop.move(),
                 WaitUntil.the(PRODUCTS_TITLE, isPresent()).forNoMoreThan(50).seconds(),
-                Open.productPageByPosition(0),
+                Open.productPageByPosition(),
                 AddProduct.toCart(),
                 Click.on(CLOSE_ALERT_BOX_BUTTON),
                 Click.on(MINICART_BUTTON)

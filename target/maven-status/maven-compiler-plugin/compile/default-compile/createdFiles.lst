@@ -1,6 +1,7 @@
 com/deosite/tests/questions/account/EmailName.class
 com/deosite/tests/pages/CategoryPage.class
 com/deosite/tests/tasks/account/SelectAddress.class
+com/deosite/tests/tasks/product/AddProductToCart.class
 com/deosite/tests/tasks/mainMenu/ClickCategory.class
 com/deosite/tests/pages/SuccessPage.class
 com/deosite/tests/questions/login/LoginButton.class
@@ -35,6 +36,7 @@ com/deosite/tests/tasks/minicart/IncreaseNumberOfProducts.class
 com/deosite/tests/tasks/order/Place.class
 com/deosite/tests/tasks/basic/GetCookies.class
 com/deosite/tests/tasks/categoryPage/EnsurePageContent.class
+com/deosite/tests/tasks/product/AddToCartFromSubCategory.class
 com/deosite/tests/questions/homeapge/CountryUrl.class
 com/deosite/tests/questions/alert/Value.class
 com/deosite/tests/questions/minicart/ProductNameInMinicart.class
@@ -50,11 +52,13 @@ com/deosite/tests/model/order/Basic.class
 com/deosite/tests/i18n/Bundle_en_GB.class
 com/deosite/tests/questions/account/MyAccountHeader.class
 com/deosite/tests/abilities/Load.class
+com/deosite/tests/tasks/product/AddToCartFromPdp.class
 com/deosite/tests/i18n/Bundle_de_DE.class
 com/deosite/tests/questions/payment/GetTotalSumOnPaymentPage.class
 com/deosite/tests/questions/product/Product.class
 com/deosite/tests/tasks/categoryPage/ClickCollectionBanner.class
 com/deosite/tests/questions/checkout/GetTotalSum.class
+com/deosite/tests/tasks/product/ReturnAndAddAnotherProduct.class
 com/deosite/tests/questions/minicart/EmptyCartMessage.class
 com/deosite/tests/questions/minicart/NumberOfProducts.class
 com/deosite/tests/questions/product/ProductTitleOnSearchPage.class
@@ -108,6 +112,7 @@ com/deosite/tests/actions/OpenCheckoutPage.class
 com/deosite/tests/pages/RegisterPage.class
 com/deosite/tests/questions/account/Value.class
 com/deosite/tests/questions/checkout/DiscountPrice.class
+com/deosite/tests/tasks/categoryPage/SelectSubCategory.class
 com/deosite/tests/tasks/order/PayAfterLogin.class
 com/deosite/tests/tasks/order/Pay.class
 com/deosite/tests/pages/CookiesNotification.class
@@ -135,6 +140,7 @@ com/deosite/tests/questions/account/LoginButton.class
 com/deosite/tests/tasks/login/SubmitLoginForm.class
 com/deosite/tests/tasks/categoryPage/ApplyFilters.class
 com/deosite/tests/tasks/login/FillInLoginForm.class
+com/deosite/tests/tasks/product/AddToCartFromCollectionPage.class
 com/deosite/tests/questions/account/OrderImage.class
 com/deosite/tests/pages/SearchPage.class
 com/deosite/tests/tasks/order/SelectShippingAddress.class
@@ -148,5 +154,6 @@ com/deosite/tests/questions/product/QuickSearchProduct.class
 com/deosite/tests/questions/payment/GetCartValueOnPaymentPage.class
 com/deosite/tests/pages/ProductPage.class
 com/deosite/tests/actions/OpenCategoryPage.class
+com/deosite/tests/tasks/categoryPage/SelectBrandPage.class
 com/deosite/tests/tasks/order/SelectBillingCountry.class
 com/deosite/tests/i18n/Bundle_cs_CZ.class

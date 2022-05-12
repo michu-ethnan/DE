@@ -1,3 +1,4 @@
+com/deosite/tests/OrderProductsFromBrandsPage_1.class
 com/deosite/tests/features/creating_orders/OrderProductsLoggedIn.class
 com/deosite/tests/features/using_minicart/AddTwoDifferentProductsAndCalculateTotalSum.class
 com/deosite/tests/features/using_my_account/DeleteAddress.class
@@ -7,6 +8,7 @@ com/deosite/tests/features/filtering/ApplyRangeFilter.class
 com/deosite/tests/features/using_minicart/CloseCart.class
 com/deosite/tests/NavigatingWebsiteSuite_1.class
 com/deosite/tests/ProductPageSuite.class
+com/deosite/tests/OrderProductsFromBrandsPage_4.class
 com/deosite/tests/features/login/LogInUsingDifferentEmailAddress.class
 com/deosite/tests/CheckoutSuite.class
 com/deosite/tests/features/using_minicart/CalculateTotalSumInMinicart.class
@@ -31,11 +33,15 @@ com/deosite/tests/features/filtering/ApplyFilterAndGoToNextPage.class
 com/deosite/tests/features/navigating_website/GoToNextPage.class
 com/deosite/tests/UsingMyAccountSuite.class
 com/deosite/tests/features/creating_orders/OrderProductsFromCategories.class
+com/deosite/tests/OrderProductsFromBrandsPage_3.class
 com/deosite/tests/OrderingLoggedInSuite_1.class
 com/deosite/tests/features/navigating_website/SelectLanguage.class
 com/deosite/tests/features/using_minicart/DeleteFromCartAndCheckTotalSum.class
+com/deosite/tests/OrderProductsFromSubCategories.class
 com/deosite/tests/OrderFromCategoriesSuite.class
 com/deosite/tests/CucumberTestSuite.class
+com/deosite/tests/OrderProductsFromBrandsPage_2.class
+com/deosite/tests/features/creating_orders/OrderFromSubCategories.class
 com/deosite/tests/OrderingTestSuite_1.class
 com/deosite/tests/features/using_my_account/EditAddress.class
 com/deosite/tests/features/using_my_account/SeeOrder.class
@@ -52,6 +58,7 @@ com/deosite/tests/features/using_my_account/AddAddress.class
 com/deosite/tests/features/checkout/AddTwoDifferentProductsAndGoToCheckout.class
 com/deosite/tests/features/using_my_account/LogOut.class
 com/deosite/tests/features/sorting/SortingByPriceLowestFirst.class
+com/deosite/tests/features/creating_orders/OrderFromMarki.class
 com/deosite/tests/NavigatingWebsiteSuite_2.class
 com/deosite/tests/features/navigating_website/BrowseHomePage.class
 com/deosite/tests/features/using_minicart/DeleteFromCart.class

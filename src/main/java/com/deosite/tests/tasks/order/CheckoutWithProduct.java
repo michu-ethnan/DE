@@ -29,7 +29,7 @@ public class CheckoutWithProduct implements Task {
         actor.attemptsTo(
                 Search.forProductByTranslatedKeyword(product),
                 WaitUntil.the(CategoryPage.PAGINATION_ARROW, isPresent()),
-                Open.productPageByPosition(9),
+                Open.productPageByPosition(),
                 AddProduct.toCart(),
                 MoveMouseDown.move(),
                 Scroll.to(MiniCart.MINICART_BUTTON),

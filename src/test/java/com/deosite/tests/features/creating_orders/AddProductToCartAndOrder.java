@@ -39,7 +39,7 @@ public class AddProductToCartAndOrder {
         theActorCalled(actor).wasAbleTo(
                 Setup.site(),
                 ClickCategory.byCategoryNumber(5),
-                Open.productPageByPosition(6),
+                Open.productPageByPosition(),
                 AddProduct.toCart()
 
         );
