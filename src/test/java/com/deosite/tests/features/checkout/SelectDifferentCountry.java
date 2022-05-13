@@ -33,9 +33,7 @@ public class SelectDifferentCountry {
                 Setup.site(),
                 ClickCategory.byCategoryNumber(5),
                 Open.productPageByPosition(),
-                AddProduct.toCart(),
-                MoveMouseDown.move(),
-                Scroll.to(MiniCart.MINICART_BUTTON),
+                AddProductToCart.toCart(),
                 Open.miniCart(),
                 Open.checkoutPage(),
                 WaitUntil.the(EMAIL_INPUT, isPresent()).forNoMoreThan(50).seconds()

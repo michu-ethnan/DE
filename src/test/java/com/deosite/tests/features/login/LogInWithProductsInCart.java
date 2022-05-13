@@ -13,6 +13,7 @@ import com.deosite.tests.tasks.login.FillInLoginForm;
 import com.deosite.tests.tasks.login.SubmitLoginForm;
 import com.deosite.tests.tasks.mainMenu.ClickCategory;
 import com.deosite.tests.tasks.product.AddProduct;
+import com.deosite.tests.tasks.product.AddProductToCart;
 import com.deosite.tests.tasks.product.MoveMouseDown;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -46,7 +47,7 @@ public class LogInWithProductsInCart {
                 Setup.site(),
                 ClickCategory.byCategoryNumber(5),
                 Open.productPageByPosition(),
-                AddProduct.toCart()
+                AddProductToCart.toCart()
         );
         productInCartBeforeLogin = ProductName.productName().answeredBy(theActorInTheSpotlight());
 

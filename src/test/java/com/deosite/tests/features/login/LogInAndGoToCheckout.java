@@ -13,6 +13,7 @@ import com.deosite.tests.tasks.order.ChooseDelivery;
 import com.deosite.tests.tasks.order.FillInBillingData;
 import com.deosite.tests.tasks.order.PayAfterLogin;
 import com.deosite.tests.tasks.product.AddProduct;
+import com.deosite.tests.tasks.product.AddProductToCart;
 import com.deosite.tests.tasks.product.MoveMouseDown;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -46,7 +47,7 @@ public class LogInAndGoToCheckout {
                 Setup.site(),
                 ClickCategory.byCategoryNumber(4),
                 Open.productPageByPosition(),
-                AddProduct.toCart(),
+                AddProductToCart.toCart(),
                 ReturnToPreviousPage.goToPreviousPage()
         );
     }

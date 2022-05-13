@@ -8,6 +8,7 @@ import com.deosite.tests.tasks.Setup;
 import com.deosite.tests.tasks.mainMenu.ClickCategory;
 import com.deosite.tests.tasks.order.*;
 import com.deosite.tests.tasks.product.AddProduct;
+import com.deosite.tests.tasks.product.AddProductToCart;
 import com.deosite.tests.tasks.product.MoveMouseDown;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -40,7 +41,7 @@ public class AddProductToCartAndOrder {
                 Setup.site(),
                 ClickCategory.byCategoryNumber(5),
                 Open.productPageByPosition(),
-                AddProduct.toCart()
+                AddProductToCart.toCart()
 
         );
     }
@@ -48,8 +49,6 @@ public class AddProductToCartAndOrder {
     @When("he attempts to order it as {word} using courier delivery")
     public void actor_attempts_to_order_it_as_selected_user_type_using_selected_delivery_type(String userType) {
         theActorInTheSpotlight().attemptsTo(
-                MoveMouseDown.move(),
-                Scroll.to(MiniCart.MINICART_BUTTON),
                 Open.miniCart(),
                 Open.checkoutPage(),
                 FillInBillingData.type(userType)

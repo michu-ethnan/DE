@@ -41,7 +41,6 @@ com/deosite/tests/OrderProductsFromSubCategories.class
 com/deosite/tests/OrderFromCategoriesSuite.class
 com/deosite/tests/CucumberTestSuite.class
 com/deosite/tests/OrderProductsFromBrandsPage_2.class
-com/deosite/tests/features/creating_orders/OrderFromSubCategories.class
 com/deosite/tests/OrderingTestSuite_1.class
 com/deosite/tests/features/using_my_account/EditAddress.class
 com/deosite/tests/features/using_my_account/SeeOrder.class

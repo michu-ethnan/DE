@@ -12,6 +12,7 @@ import com.deosite.tests.tasks.login.FillInLoginForm;
 import com.deosite.tests.tasks.login.SubmitLoginForm;
 import com.deosite.tests.tasks.order.*;
 import com.deosite.tests.tasks.product.AddProduct;
+import com.deosite.tests.tasks.product.AddProductToCart;
 import com.deosite.tests.tasks.product.MoveMouseDown;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -84,8 +85,8 @@ public class OrderProductsLoggedIn {
                 Search.forProductByTranslatedKeyword(product),
                 WaitUntil.the(CategoryPage.PAGINATION_ARROW, isPresent()),
                 Open.productPageByPosition(),
-                AddProduct.toCart(),
-                Click.on(MINI_CART_BUTTON_AFTER_LOGIN),
+                AddProductToCart.toCart(),
+                Open.miniCart(),
                 Open.checkoutPage(),
                 WaitUntil.the(CheckoutPage.EMAIL_INPUT, isPresent()).forNoMoreThan(100).seconds()
         );

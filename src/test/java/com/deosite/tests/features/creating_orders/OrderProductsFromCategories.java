@@ -11,6 +11,7 @@ import com.deosite.tests.tasks.categoryPage.SelectCategory;
 import com.deosite.tests.tasks.mainMenu.ClickCategory;
 import com.deosite.tests.tasks.order.FillInBillingData;
 import com.deosite.tests.tasks.product.AddProduct;
+import com.deosite.tests.tasks.product.AddProductToCart;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -67,7 +68,7 @@ public class OrderProductsFromCategories {
     public void alex_adds_product_from_category_page(){
     theActorInTheSpotlight().attemptsTo(
             Open.productPageByPosition(),
-            AddProduct.toCart(),
+            AddProductToCart.toCart(),
             Open.miniCart()
 
     );

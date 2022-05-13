@@ -10,6 +10,7 @@ import com.deosite.tests.tasks.basic.ReturnToPreviousPage;
 import com.deosite.tests.tasks.mainMenu.ClickCategory;
 import com.deosite.tests.tasks.order.FillInBillingData;
 import com.deosite.tests.tasks.product.AddProduct;
+import com.deosite.tests.tasks.product.AddProductToCart;
 import com.deosite.tests.tasks.product.MoveMouseDown;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -43,13 +44,12 @@ public class AddTwoDifferentProductsAndGoToCheckout {
             Setup.site(),
             ClickCategory.byCategoryNumber(0)
     );
-
 }
 @And("he adds the first product to cart")
     public void actor_adda_the_first_product_to_cart(){
     theActorInTheSpotlight().attemptsTo(
             Open.productPageByPosition(),
-            AddProduct.toCart(),
+            AddProductToCart.toCart(),
             MoveMouseDown.move()
     );
 
@@ -66,7 +66,7 @@ public class AddTwoDifferentProductsAndGoToCheckout {
     theActorInTheSpotlight().attemptsTo(
             WaitUntil.the(FIRST_MAIN_CATEGORY, isPresent()),
             Open.productPageByPosition(),
-            AddProduct.toCart(),
+            AddProductToCart.toCart(),
             Open.miniCart(),
             Open.checkoutPage()
     );
@@ -82,7 +82,7 @@ public class AddTwoDifferentProductsAndGoToCheckout {
                 ClickCategory.byCategoryNumber(4),
                 WaitUntil.the(CATEGORY_HEADER, isPresent()),
                 Open.productPageByPosition(),
-                AddProduct.toCart(),
+                AddProductToCart.toCart(),
                 Open.miniCart(),
                 Open.checkoutPage()
         );
