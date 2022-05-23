@@ -40,7 +40,6 @@ public class AddTwoDifferentProductsAndCalculateTotalSum {
                 ClickCategory.byCategoryNumber(0),
                 Open.productPageByPosition(),
                 AddProduct.toCart(),
-                Click.on(CLOSE_ALERT_BOX_BUTTON),
                 MoveMouseDown.move(),
                 ReturnToPreviousPage.goToPreviousPage(),
                 ClickCategory.byCategoryNumber(2),

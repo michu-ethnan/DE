@@ -51,31 +51,25 @@ public class DeleteFromCartAndCheckTotalSum {
                 ClickCategory.byCategoryNumber(6),
                 Open.productPageByPosition(),
                 AddProduct.toCart(),
-                //Click.on(CLOSE_ALERT_BOX_BUTTON),
                 WaitUntil.the(MainMenu.SEARCH_BAR, isPresent()),
                 MoveMouseDown.move(),
                 ReturnToPreviousPage.goToPreviousPage(),
                 Open.productPageByPosition(),
                 AddProduct.toCart(),
-                //Click.on(CLOSE_ALERT_BOX_BUTTON),
                 WaitUntil.the(MainMenu.SEARCH_BAR, isPresent()),
                 MoveMouseDown.move(),
                 ReturnToPreviousPage.goToPreviousPage(),
                 Open.productPageByPosition(),
                 AddProduct.toCart(),
-                //Click.on(CLOSE_ALERT_BOX_BUTTON),
-                //WaitUntil.the(ALERT_BOX, isNotVisible()),
                 Open.miniCart()
-                //WaitUntil.the(DELETE_PRODUCT_BUTTON, isPresent())
+
         );
     }
 
     @And("she has three products at checkout")
     public void that_actor_has_three_products_at_checkout() {
         theActorInTheSpotlight().attemptsTo(
-                WaitUntil.the(GO_TO_CHECKOUT_BUTTON, isPresent()),
-                Open.checkoutPage(),
-                WaitUntil.the(EMAIL_INPUT, isPresent()).forNoMoreThan(50).seconds()
+                Open.checkoutPage()
         );
     }
 

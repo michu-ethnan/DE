@@ -27,6 +27,7 @@ import net.thucydides.core.annotations.Steps;
 
 import static com.deosite.tests.pages.LoginPage.LOGIN_BUTTON;
 import static com.deosite.tests.pages.LoginPage.SUBMIT_BUTTON;
+import static com.deosite.tests.pages.MainMenu.MINI_CART_BUTTON;
 import static com.deosite.tests.pages.MainMenu.SEARCH_BAR;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
@@ -51,7 +52,7 @@ public class LogInWithProductsInCart {
         );
         productInCartBeforeLogin = ProductName.productName().answeredBy(theActorInTheSpotlight());
 
-        theActorCalled(actor).attemptsTo(Scroll.to(ProductPage.OTHER_PRODUCTS_HEADING));
+        theActorCalled(actor).attemptsTo(MoveMouseDown.move());
         theActorCalled(actor).attemptsTo(ReturnToPreviousPage.goToPreviousPage());
     }
 
@@ -69,7 +70,7 @@ public class LogInWithProductsInCart {
     @And("opens the minicart")
     public void actor_opens_the_minicart() {
         theActorInTheSpotlight().attemptsTo(
-                Open.miniCart(),
+               Click.on(MINI_CART_BUTTON),
                 WaitUntil.the(MiniCart.GO_TO_CHECKOUT_BUTTON, isPresent()).forNoMoreThan(100).seconds()
         );
     }

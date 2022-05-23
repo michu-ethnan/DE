@@ -59,9 +59,7 @@ public class LogInAndGoToCheckout {
                 Open.loginPage(),
                 FillInLoginForm.type("login"),
                 SubmitLoginForm.submitLoginForm(),
-                WaitUntil.the(SUBMIT_BUTTON, isNotPresent()),
-                Scroll.to(HomePage.SECOND_BANNER),
-                Scroll.to(MINI_CART_BUTTON_AFTER_LOGIN)
+                WaitUntil.the(SUBMIT_BUTTON, isNotPresent())
         );
     }
 

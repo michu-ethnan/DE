@@ -283,8 +283,8 @@
 
                             </includes>
                             <parallel>suites</parallel>
-                            <threadCount>50</threadCount>
-                            <forkCount>50</forkCount>
+                            <threadCount>10</threadCount>
+                            <forkCount>10</forkCount>
                             <reuseForks>false</reuseForks>
                             <argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>
                             <systemPropertyVariables>

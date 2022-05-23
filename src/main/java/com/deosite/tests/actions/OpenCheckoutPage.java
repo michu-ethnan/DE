@@ -17,7 +17,6 @@ public class OpenCheckoutPage implements Interaction {
     public <T extends Actor> void performAs(T actor) {
 
         actor.attemptsTo(
-                WaitUntil.the(GO_TO_CHECKOUT_BUTTON, isPresent()),
                 Click.on(GO_TO_CHECKOUT_BUTTON),
                 WaitUntil.the(EMAIL_INPUT, isPresent()).forNoMoreThan(100).seconds()
         );

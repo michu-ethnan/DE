@@ -67,9 +67,7 @@ public class AddItemsToCart {
     @When("(s)he tries to add it to cart")
     public void actor_tries_to_add_product_to_cart() {
         theActorInTheSpotlight().attemptsTo(
-                WaitUntil.the(ADD_TO_CART_BUTTON, isClickable()).forNoMoreThan(100).seconds(),
-                Click.on(ADD_TO_CART_BUTTON),
-                WaitUntil.the(ALERT_BOX, isPresent()).forNoMoreThan(100).seconds()
+                AddProduct.toCart()
 
         );
 

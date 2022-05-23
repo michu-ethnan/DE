@@ -26,7 +26,6 @@ com/deosite/tests/OrderingLoggedInSuite_2.class
 com/deosite/tests/OrderingTestSuite_3.class
 com/deosite/tests/features/sorting/SortingByPriceHighestFirst.class
 com/deosite/tests/features/navigating_website/BrowseCategories.class
-com/deosite/tests/features/login/LogIn.class
 com/deosite/tests/UsingMinicartSuite_2.class
 com/deosite/tests/features/checkout/SelectDifferentCountry.class
 com/deosite/tests/features/filtering/ApplyFilterAndGoToNextPage.class

@@ -87,8 +87,7 @@ public class OrderProductsLoggedIn {
                 Open.productPageByPosition(),
                 AddProductToCart.toCart(),
                 Open.miniCart(),
-                Open.checkoutPage(),
-                WaitUntil.the(CheckoutPage.EMAIL_INPUT, isPresent()).forNoMoreThan(100).seconds()
+                Open.checkoutPage()
         );
     }
 
