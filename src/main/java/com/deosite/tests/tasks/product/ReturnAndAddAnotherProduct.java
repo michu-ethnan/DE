@@ -22,7 +22,7 @@ public class ReturnAndAddAnotherProduct implements Task {
         actor.attemptsTo(
                 ReturnToPreviousPage.goToPreviousPage(),
                 WaitUntil.the(SEARCH_BAR, isPresent()),
-                Open.productPageByPosition(),
+                Open.productPageByPositionRandomly(),
                 Check.whether(ADD_TO_CART_BUTTON.resolveFor(actor).isClickable()).andIfSo(AddToCartFromPdp.toCart()).otherwise(ReturnAndAddAnotherProduct.toCart())
         );
     }

@@ -32,8 +32,8 @@ public class SelectDifferentCountry {
         theActorCalled(actor).wasAbleTo(
                 Setup.site(),
                 ClickCategory.byCategoryNumber(5),
-                Open.productPageByPosition(),
-                AddProductToCart.toCart(),
+                Open.productPageByPositionRandomly(),
+                AddProduct.toCart(),
                 Open.miniCart(),
                 Open.checkoutPage(),
                 WaitUntil.the(EMAIL_INPUT, isPresent()).forNoMoreThan(50).seconds()

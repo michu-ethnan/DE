@@ -38,8 +38,8 @@ public class RefreshPaymentPage {
         theActorCalled(actor).wasAbleTo(
                 Setup.site(),
                 ClickCategory.byCategoryNumber(2),
-                Open.productPageByPosition(),
-                AddProductToCart.toCart(),
+                Open.productPageByPositionRandomly(),
+                AddProduct.toCart(),
                 MoveMouseDown.move(),
                 Open.miniCart(),
                 Open.checkoutPage(),

@@ -55,14 +55,14 @@ public class ReturnAfterClickingConfigurableProduct {
     @When("she goes to the product page")
     public void actor_goes_to_the_product_page() {
         theActorInTheSpotlight().attemptsTo(
-                Open.productPageByPosition()
+                Open.productPageByPosition(2)
         );
     }
 
     @When("she goes to the product page from category page")
     public void actor_goes_to_the_product_page_from_category_page() {
         theActorInTheSpotlight().attemptsTo(
-                Open.productPageByPosition()
+                Open.productPageByPosition(2)
         );
     }
 

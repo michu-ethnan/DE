@@ -49,7 +49,7 @@ public class AddItemsToCart {
                 Search.forProductByTranslatedKeyword(product),
                 MoveMouseToTop.move(),
                 WaitUntil.the(PRODUCTS_TITLE, isPresent()).forNoMoreThan(50).seconds(),
-                Open.productPageByPosition()
+                Open.productPageByPositionRandomly()
         );
     }
     @Given("that {word} has clicked a product from a certain category")
@@ -59,7 +59,7 @@ public class AddItemsToCart {
                 WaitUntil.the(SEARCH_BAR, isPresent()).forNoMoreThan(100).seconds(),
                 ClickCategory.byCategoryNumber(0),
                 WaitUntil.the(CATEGORY_HEADER, isPresent()),
-                Open.productPageByPosition()
+                Open.productPageByPositionRandomly()
         );
         addedProduct = ProductName.productName().answeredBy(theActorInTheSpotlight());
     }

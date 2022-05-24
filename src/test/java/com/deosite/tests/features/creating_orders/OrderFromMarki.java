@@ -5,6 +5,7 @@ import com.deosite.tests.steps.SetupSteps;
 import com.deosite.tests.tasks.Setup;
 import com.deosite.tests.tasks.categoryPage.SelectBrandPage;
 import com.deosite.tests.tasks.mainMenu.ClickCategory;
+import com.deosite.tests.tasks.product.AddProduct;
 import com.deosite.tests.tasks.product.AddProductToCart;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
@@ -28,8 +29,8 @@ public class OrderFromMarki {
     @When("he adds product from brand page")
     public void actor_adds_product_from_brand_page(){
         theActorInTheSpotlight().attemptsTo(
-                Open.productPageByPosition(),
-                AddProductToCart.toCart(),
+                Open.productPageByPositionRandomly(),
+                AddProduct.toCart(),
                 Open.miniCart()
         );
 

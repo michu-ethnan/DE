@@ -14,14 +14,15 @@ public class Open {
         return new OpenCheckoutPage();
     }
 
-    public static OpenProductPageRandomly productPageByPosition() {
-        return instrumented(OpenProductPageRandomly.class);
-
-    }
-
-    public static OpenProductPageManually productPageManually(int position) {
+    public static OpenProductPageManually productPageByPosition(int position) {
         return Instrumented.instanceOf(OpenProductPageManually.class).withProperties(position);
     }
+    public static OpenProductPageRandomly productPageByPositionRandomly() {
+        return instrumented(OpenProductPageRandomly.class);
+
+
+    }
+
 
     public static OpenLoginPage loginPage() {
         return new OpenLoginPage();

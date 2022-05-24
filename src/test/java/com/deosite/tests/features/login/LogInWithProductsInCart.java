@@ -47,8 +47,8 @@ public class LogInWithProductsInCart {
         theActorCalled(actor).wasAbleTo(
                 Setup.site(),
                 ClickCategory.byCategoryNumber(5),
-                Open.productPageByPosition(),
-                AddProductToCart.toCart()
+                Open.productPageByPositionRandomly(),
+                AddProduct.toCart()
         );
         productInCartBeforeLogin = ProductName.productName().answeredBy(theActorInTheSpotlight());
 
@@ -70,6 +70,8 @@ public class LogInWithProductsInCart {
     @And("opens the minicart")
     public void actor_opens_the_minicart() {
         theActorInTheSpotlight().attemptsTo(
+                Scroll.to(HomePage.SECOND_BANNER),
+               Scroll.to(MINI_CART_BUTTON),
                Click.on(MINI_CART_BUTTON),
                 WaitUntil.the(MiniCart.GO_TO_CHECKOUT_BUTTON, isPresent()).forNoMoreThan(100).seconds()
         );

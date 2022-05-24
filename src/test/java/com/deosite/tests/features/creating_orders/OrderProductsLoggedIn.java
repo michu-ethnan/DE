@@ -84,8 +84,8 @@ public class OrderProductsLoggedIn {
         theActorInTheSpotlight().attemptsTo(
                 Search.forProductByTranslatedKeyword(product),
                 WaitUntil.the(CategoryPage.PAGINATION_ARROW, isPresent()),
-                Open.productPageByPosition(),
-                AddProductToCart.toCart(),
+                Open.productPageByPositionRandomly(),
+                AddProduct.toCart(),
                 Open.miniCart(),
                 Open.checkoutPage()
         );

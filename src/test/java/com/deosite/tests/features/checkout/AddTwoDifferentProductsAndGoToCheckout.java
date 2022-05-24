@@ -48,8 +48,8 @@ public class AddTwoDifferentProductsAndGoToCheckout {
 @And("he adds the first product to cart")
     public void actor_adda_the_first_product_to_cart(){
     theActorInTheSpotlight().attemptsTo(
-            Open.productPageByPosition(),
-            AddProductToCart.toCart(),
+            Open.productPageByPositionRandomly(),
+            AddProduct.toCart(),
             MoveMouseDown.move()
     );
 
@@ -65,8 +65,8 @@ public class AddTwoDifferentProductsAndGoToCheckout {
     public void actor_adds_another_product_to_cart_and_goes_to_checkout(){
     theActorInTheSpotlight().attemptsTo(
             WaitUntil.the(FIRST_MAIN_CATEGORY, isPresent()),
-            Open.productPageByPosition(),
-            AddProductToCart.toCart(),
+            Open.productPageByPositionRandomly(),
+            AddProduct.toCart(),
             Open.miniCart(),
             Open.checkoutPage()
     );
@@ -81,8 +81,8 @@ public class AddTwoDifferentProductsAndGoToCheckout {
                 Scroll.to(SEARCH_BAR),
                 ClickCategory.byCategoryNumber(4),
                 WaitUntil.the(CATEGORY_HEADER, isPresent()),
-                Open.productPageByPosition(),
-                AddProductToCart.toCart(),
+                Open.productPageByPositionRandomly(),
+                AddProduct.toCart(),
                 Open.miniCart(),
                 Open.checkoutPage()
         );

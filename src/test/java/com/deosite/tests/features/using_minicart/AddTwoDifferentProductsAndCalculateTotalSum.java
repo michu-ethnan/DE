@@ -38,14 +38,14 @@ public class AddTwoDifferentProductsAndCalculateTotalSum {
         theActorCalled(actor).wasAbleTo(
                 Setup.site(),
                 ClickCategory.byCategoryNumber(0),
-                Open.productPageByPosition(),
+                Open.productPageByPositionRandomly(),
                 AddProduct.toCart(),
                 MoveMouseDown.move(),
                 ReturnToPreviousPage.goToPreviousPage(),
                 ClickCategory.byCategoryNumber(2),
-                Open.productPageByPosition(),
+                Open.productPageByPositionRandomly(),
                 AddProduct.toCart(),
-                //WaitUntil.the(ALERT_BOX, isNotVisible()).forNoMoreThan(100).seconds(),
+                WaitUntil.the(ALERT_BOX, isNotVisible()).forNoMoreThan(100).seconds(),
                 Open.miniCart(),
                 WaitUntil.the(MiniCart.PRODUCT_PRICE_LIST, isPresent()).forNoMoreThan(100).seconds()
         );

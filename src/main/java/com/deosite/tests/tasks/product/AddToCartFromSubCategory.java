@@ -18,7 +18,7 @@ public class AddToCartFromSubCategory implements Task {
     @Step("{0} adds product from sub catrgory")
     public <T extends Actor> void performAs(T actor){
         actor.attemptsTo(
-                        Open.productPageByPosition(),
+                        Open.productPageByPositionRandomly(),
                         WaitUntil.the(ADD_TO_CART_BUTTON, isPresent()).forNoMoreThan(100).seconds(),
                         WaitUntil.the(ADD_TO_CART_BUTTON, isClickable()).forNoMoreThan(100).seconds(),
                         Click.on(ADD_TO_CART_BUTTON),
