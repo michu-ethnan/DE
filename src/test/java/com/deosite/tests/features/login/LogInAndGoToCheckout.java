@@ -48,6 +48,7 @@ public class LogInAndGoToCheckout {
                 ClickCategory.byCategoryNumber(4),
                 Open.productPageByPositionRandomly(),
                 AddProduct.toCart(),
+                MoveMouseDown.move(),
                 ReturnToPreviousPage.goToPreviousPage()
         );
     }

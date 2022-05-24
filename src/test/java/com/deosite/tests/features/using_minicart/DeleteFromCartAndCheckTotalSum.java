@@ -60,6 +60,7 @@ public class DeleteFromCartAndCheckTotalSum {
                 MoveMouseDown.move(),
                 ReturnToPreviousPage.goToPreviousPage(),
                 Open.productPageByPosition(5),
+                Click.on(CLOSE_ALERT_BOX_BUTTON),
                 AddProduct.toCart(),
                 Open.miniCart()
 

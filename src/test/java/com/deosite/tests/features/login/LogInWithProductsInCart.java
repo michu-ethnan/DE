@@ -27,12 +27,10 @@ import net.thucydides.core.annotations.Steps;
 
 import static com.deosite.tests.pages.LoginPage.LOGIN_BUTTON;
 import static com.deosite.tests.pages.LoginPage.SUBMIT_BUTTON;
-import static com.deosite.tests.pages.MainMenu.MINI_CART_BUTTON;
-import static com.deosite.tests.pages.MainMenu.SEARCH_BAR;
+import static com.deosite.tests.pages.MainMenu.*;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
-import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isNotPresent;
-import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isPresent;
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.*;
 
 public class LogInWithProductsInCart {
 
@@ -70,10 +68,9 @@ public class LogInWithProductsInCart {
     @And("opens the minicart")
     public void actor_opens_the_minicart() {
         theActorInTheSpotlight().attemptsTo(
-                Scroll.to(HomePage.SECOND_BANNER),
-               Scroll.to(MINI_CART_BUTTON),
-               Click.on(MINI_CART_BUTTON),
-                WaitUntil.the(MiniCart.GO_TO_CHECKOUT_BUTTON, isPresent()).forNoMoreThan(100).seconds()
+                WaitUntil.the(MINI_CART_BUTTON, isClickable()),
+                Click.on(MINI_CART_BUTTON),
+                WaitUntil.the(MiniCart.GO_TO_CHECKOUT_BUTTON, isClickable()).forNoMoreThan(100).seconds()
         );
     }
 
