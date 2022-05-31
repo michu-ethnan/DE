@@ -32,6 +32,7 @@ import static com.deosite.tests.pages.Alert.CLOSE_ALERT_BOX_BUTTON;
 import static com.deosite.tests.pages.CheckoutPage.EMAIL_INPUT;
 import static com.deosite.tests.pages.CheckoutPage.SUBMIT_BUTTON;
 import static com.deosite.tests.pages.CheckoutPage.DELETE_PRODUCT_BUTTON_AT_CHECKOUT;
+import static com.deosite.tests.pages.MainMenu.MINI_CART_BUTTON;
 import static com.deosite.tests.pages.MiniCart.*;
 import static com.deosite.tests.pages.PaymentPage.DELETE_PRODUCT_BUTTON_ON_PAYMENT_PAGE;
 import static com.deosite.tests.pages.PaymentPage.PLACE_ORDER_BUTTON;
@@ -48,29 +49,32 @@ public class DeleteFromCartAndCheckTotalSum {
     public void that_actor_has_three_products_in_cart(String actor) {
         theActorCalled(actor).wasAbleTo(
                 Setup.site(),
-                ClickCategory.byCategoryNumber(6),
-                Open.productPageByPosition(1),
+                ClickCategory.byCategoryNumber(5),
+                Open.productPageByPosition(7),
                 AddProduct.toCart(),
-                WaitUntil.the(MainMenu.SEARCH_BAR, isPresent()),
-                MoveMouseDown.move(),
-                ReturnToPreviousPage.goToPreviousPage(),
-                Open.productPageByPosition(3),
-                AddProduct.toCart(),
-                WaitUntil.the(MainMenu.SEARCH_BAR, isPresent()),
-                MoveMouseDown.move(),
-                ReturnToPreviousPage.goToPreviousPage(),
-                Open.productPageByPosition(5),
                 Click.on(CLOSE_ALERT_BOX_BUTTON),
+                MoveMouseDown.move(),
+                ReturnToPreviousPage.goToPreviousPage(),
+                Open.productPageByPosition(10),
                 AddProduct.toCart(),
+                Click.on(CLOSE_ALERT_BOX_BUTTON),
+                MoveMouseDown.move(),
+                ReturnToPreviousPage.goToPreviousPage(),
+                Open.productPageByPosition(9),
+                AddProduct.toCart(),
+                Click.on(CLOSE_ALERT_BOX_BUTTON),
+                MoveMouseDown.move(),
+                MoveMouse.to(MINI_CART_BUTTON),
                 Open.miniCart()
-
         );
     }
 
     @And("she has three products at checkout")
     public void that_actor_has_three_products_at_checkout() {
         theActorInTheSpotlight().attemptsTo(
-                Open.checkoutPage()
+                WaitUntil.the(GO_TO_CHECKOUT_BUTTON, isClickable()),
+                Open.checkoutPage(),
+                WaitUntil.the(EMAIL_INPUT, isPresent()).forNoMoreThan(50).seconds()
         );
     }
 

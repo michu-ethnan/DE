@@ -58,6 +58,7 @@ com/deosite/tests/questions/payment/GetTotalSumOnPaymentPage.class
 com/deosite/tests/questions/product/Product.class
 com/deosite/tests/tasks/categoryPage/ClickCollectionBanner.class
 com/deosite/tests/actions/OpenProductPageManually.class
+com/deosite/tests/questions/filters/FilterName.class
 com/deosite/tests/questions/checkout/GetTotalSum.class
 com/deosite/tests/tasks/product/ReturnAndAddAnotherProduct.class
 com/deosite/tests/questions/minicart/EmptyCartMessage.class

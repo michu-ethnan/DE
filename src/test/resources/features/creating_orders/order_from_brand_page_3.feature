@@ -57,9 +57,5 @@ Feature: Order from brand pages-3
     And goes to checkout as a person
     Then she should be able to see that she on payment page
 
-  Scenario: Glasmark
-    Given that Ian is on Glasmark page
-    When he adds product from brand page
-    And goes to checkout as a person
-    Then she should be able to see that she on payment page
+
 

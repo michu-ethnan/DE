@@ -6,11 +6,6 @@ Feature: Order from brand pages-4
     And goes to checkout as a person
     Then she should be able to see that she on payment page
 
-  Scenario: Walther Glas
-    Given that Ian is on Walther_Glas page
-    When he adds product from brand page
-    And goes to checkout as a person
-    Then she should be able to see that she on payment page
 
   Scenario: Vileda
     Given that Ian is on Vileda page
@@ -42,11 +37,6 @@ Feature: Order from brand pages-4
     And goes to checkout as a person
     Then she should be able to see that she on payment page
 
-  Scenario: Kettler
-    Given that Ian is on Kettler page
-    When he adds product from brand page
-    And goes to checkout as a person
-    Then she should be able to see that she on payment page
 
 
 

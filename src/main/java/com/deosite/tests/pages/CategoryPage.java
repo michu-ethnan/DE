@@ -4,6 +4,8 @@ import net.serenitybdd.screenplay.targets.Target;
 
 public class CategoryPage {
 
+    public static Target PRODUCT_PRICE_LIST = Target.the("product price").locatedBy("//div[@data-test=\"product-box\"]/a/div[3]/span/span[1]");
+
     public static Target PAGINATION_SELECT = Target.the("Pagination select").locatedBy("(//div[@data-test='quantity-picker-small'])[1]");
     public static Target PAGINATION_SELECT_BOTTOM = Target.the("Pagination select bottom").locatedBy("(//div[@data-test='quantity-picker-small'])[2]");
 
@@ -20,7 +22,7 @@ public class CategoryPage {
     public static Target CATEGORY_HEADER = Target.the("Category header").locatedBy("(//*[@id=\"__app__\"]//h3)[1]");
     public static Target COLLECTION_BANNERS = Target.the("Collection banners").locatedBy("//div[@class='css-11322cg']");
     public static Target FILTER_BUTTONS = Target.the("Filter buttons").locatedBy("//div[@data-test='filters-container-desktop']//button");
-    public static Target FILTER_CHECKBOXES = Target.the("Filter checkboxes").locatedBy("//*[@id=\"__layers__\"]//div[@option]/div/div[2]");
+    public static Target FILTER_CHECKBOXES = Target.the("Filter checkboxes").locatedBy("//*[@id=\"__layers__\"]//div[@option]/div/div[1]");
     public static Target SUBMIT_FILTER_BUTTON = Target.the("Submit filter button").locatedBy("//button[@data-test='apply-filter']");
     public static Target SORTING_BUTTON = Target.the("Sorting button").locatedBy("//button[@data-test='sorting-button']");
     public static Target SORTING_OPTIONS = Target.the("Sorting options").locatedBy("//*[@id=\"__layers__\"]//div[@option]");
@@ -36,7 +38,7 @@ public class CategoryPage {
 
     public static Target PROMOTION_LIST = Target.the("Inspirations list").locatedBy("//div[@class=\"css-1pq9bkx\"]//..//a");
 
-    public static Target ALL_FILTERS_BUTTON = Target.the("All filters button").locatedBy("(//div[@data-test='filters-container-desktop']//button)[14]");
+    public static Target ALL_FILTERS_BUTTON = Target.the("All filters button").locatedBy("//*[@id=\"__app__\"]/div[2]/div[3]/div/div[3]/div/div[2]/div[2]/div[1]/div[2]/div/div[2]/div/div/div[1]/button");
 
     public static Target ALL_FILTERS_BUTTON_AFTER_APPLYING_FILTER = Target.the("All filters button").locatedBy("//*[@id=\"__app__\"]/div[2]/div[3]/div/div[3]/div/div[2]/div[2]/div[1]/div[2]/div/div[2]/div/div/div[1]/button");
 

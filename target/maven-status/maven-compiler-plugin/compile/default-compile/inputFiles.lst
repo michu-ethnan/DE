@@ -54,6 +54,7 @@
 /home/deosite/DE/src/main/java/com/deosite/tests/i18n/Bundle_pl_PL.java
 /home/deosite/DE/src/main/java/com/deosite/tests/model/account/NewAddress.java
 /home/deosite/DE/src/main/java/com/deosite/tests/actions/Open.java
+/home/deosite/DE/src/main/java/com/deosite/tests/questions/filters/FilterName.java
 /home/deosite/DE/src/main/java/com/deosite/tests/tasks/minicart/IncreaseNumberOfProducts.java
 /home/deosite/DE/src/main/java/com/deosite/tests/i18n/Bundle_es_ES.java
 /home/deosite/DE/src/main/java/com/deosite/tests/questions/minicart/ProductNameInMinicart.java
