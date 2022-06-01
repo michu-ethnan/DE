@@ -155,6 +155,7 @@ com/deosite/tests/pages/CategoryTopBanner.class
 com/deosite/tests/questions/product/QuickSearchProduct.class
 com/deosite/tests/questions/payment/GetCartValueOnPaymentPage.class
 com/deosite/tests/pages/ProductPage.class
+com/deosite/tests/tasks/basic/CloseBrowser.class
 com/deosite/tests/actions/OpenCategoryPage.class
 com/deosite/tests/tasks/categoryPage/SelectBrandPage.class
 com/deosite/tests/tasks/order/SelectBillingCountry.class

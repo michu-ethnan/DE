@@ -23,6 +23,7 @@
 /home/deosite/DE/src/main/java/com/deosite/tests/tasks/minicart/DecreaseNumberOfProducts.java
 /home/deosite/DE/src/main/java/com/deosite/tests/tasks/basic/RefreshPage.java
 /home/deosite/DE/src/main/java/com/deosite/tests/actions/Search.java
+/home/deosite/DE/src/main/java/com/deosite/tests/tasks/basic/CloseBrowser.java
 /home/deosite/DE/src/main/java/com/deosite/tests/i18n/Bundle_sk_SK.java
 /home/deosite/DE/src/main/java/com/deosite/tests/tasks/login/FillInLoginForm.java
 /home/deosite/DE/src/main/java/com/deosite/tests/tasks/account/ClearAddressForm.java
