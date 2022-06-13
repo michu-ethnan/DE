@@ -50,6 +50,7 @@ public class DeleteFromCart {
     @When("she deletes it")
     public void actor_deletes_it() {
         theActorInTheSpotlight().attemptsTo(
+                WaitUntil.the(GO_TO_CHECKOUT_BUTTON, isClickable()),
                 WaitUntil.the(DELETE_PRODUCT_BUTTON, isClickable()),
                 Click.on(DELETE_PRODUCT_BUTTON),
                 Ensure.that(EMPTY_CART_MESSAGE).isDisplayed()
