@@ -50,7 +50,9 @@ public class CalculateTotalSumInMinicart {
     public void actor_calculates_the_total_sum_in_minicart() {
         theActorInTheSpotlight().attemptsTo(
                 AddProduct.toCart(),
-                WaitUntil.the(ALERT_BOX, isNotVisible()).forNoMoreThan(100).seconds(),
+                WaitUntil.the(ALERT_BOX, isNotVisible()).forNoMoreThan(100).seconds());
+        productPrice = ProductPrice.price().answeredBy(theActorInTheSpotlight());
+        theActorInTheSpotlight().attemptsTo(
                 Open.miniCart(),
                 Click.on(QUANTITY_PICKER),
                 IncreaseNumberOfProducts.byAmountNumber(1),
