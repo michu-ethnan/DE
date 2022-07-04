@@ -56,7 +56,7 @@ public class OrderProductsFromCategories {
     public void alex_wants_to_order_from_inspiracji(String actor){
         theActorCalled(actor).wasAbleTo(
                 Setup.site(),
-                ClickCategory.byCategoryNumber(9),
+                ClickCategory.byCategoryNumber(10),
                 MoveMouseToTop.move(),
                 WaitUntil.the(CATEGORY_HEADER, isPresent()),
                 MoveMouseToTop.move(),

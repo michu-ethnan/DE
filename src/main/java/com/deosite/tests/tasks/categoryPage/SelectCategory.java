@@ -74,7 +74,7 @@ public class SelectCategory implements Task {
         }
         if (categoryName.contains("Inspiracje")){
             actor.attemptsTo(
-                    ClickCategory.byCategoryNumber(9)
+                    ClickCategory.byCategoryNumber(10)
             );
 
         }
