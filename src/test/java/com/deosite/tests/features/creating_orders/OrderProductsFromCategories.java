@@ -60,7 +60,7 @@ public class OrderProductsFromCategories {
                 MoveMouseToTop.move(),
                 WaitUntil.the(CATEGORY_HEADER, isPresent()),
                 MoveMouseToTop.move(),
-                OpenInspirations.by(1)
+                OpenInspirations.by(2)
         );
     }
 

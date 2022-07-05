@@ -43,7 +43,8 @@ public class DeleteFromCart {
                 WaitUntil.the(PRODUCTS_TITLE, isPresent()).forNoMoreThan(50).seconds(),
                 Open.productPageByPositionRandomly(),
                 AddProduct.toCart(),
-                Click.on(MINICART_BUTTON)
+                Click.on(MINICART_BUTTON),
+                WaitUntil.the(SUBMIT_BUTTON, isNotPresent())
         );
     }
 
