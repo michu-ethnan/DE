@@ -35,7 +35,7 @@ public class OrderFromMarki {
     public void actor_adds_product_from_brand_page(){
 
         theActorInTheSpotlight().attemptsTo(
-                Open.productPageByPositionRandomly(),
+                Open.productPageByPosition(0),
                 AddProduct.toCart(),
                 Open.miniCart()
         );
