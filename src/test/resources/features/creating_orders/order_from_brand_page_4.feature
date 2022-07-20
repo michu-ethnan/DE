@@ -21,9 +21,7 @@ Feature: Order from brand pages-4
 
   Scenario: Churchill
     Given that Ian is on Churchill page
-    When he adds product from brand page
-    And goes to checkout as a person
-    Then she should be able to see that she on payment page
+
 
   Scenario: Ambition Junior
     Given that Ian is on AmbJunior page
